@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashenafi Chufamo - Personal Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/ashu.jpg"
+              alt="Ashenafi Chufamo"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Ashenafi Chufamo">Ashenafi Chufamo</h1>
+
+            <div class="list-content">
+              <p class="title_asdf">AI Researcher</p>
+              <p class="title_asdf">Software Engineer</p>
+              <p class="title_asdf">Entrepreneur</p>
+              <p class="title_asdf">Lab Lecturer</p>
+            </div>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a
+                  href="mailto:chufamoashenafi@example.com"
+                  class="contact-link"
+                  >chufamoashenafi@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+251944060864" class="contact-link"
+                  >+251 (944) 060-864</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">August 3, 1999</time>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Addis Ababa, Ethiopia</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.facebook.com/ashenafichufamo1"
+                class="social-link"
+              >
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://github.com/ashuChufamo" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Skill</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Blog</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              Experienced software engineer with a startup and international
+              organization background. Distinction graduate in Software
+              Engineering from Addis Ababa University. ICT internship experience
+              at UNOPS. Co-founder and full-stack developer at Sumuni Creative
+              Solutions, driving innovation and delivering cutting-edge software
+              solutions. Passionate about leveraging technology to exceed client
+              expectations and drive positive change. Expertise in various
+              programming languages and web development frameworks. Dedicated to
+              the success of Sumuni Creative Solutions
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/ai.png"
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">AI Research</h4>
+                  <p class="service-item-text">
+                    Expertise in cutting-edge AI research, development and
+                    solutions for real-world problems.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg"
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Software Design</h4>
+                  <p class="service-item-text">
+                    The most modern and high-quality design made at a
+                    professional level.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+                  <p class="service-item-text">
+                    High-quality, robust and scalable sites at the professional
+                    level.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
+                  <p class="service-item-text">
+                    Professional development of applications for iOS and
+                    Android.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/lecturer.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Lab Lecturer</h4>
+                  <p class="service-item-text">
+                    Lab lecturer for Cognitive Science and Data Structures and
+                    Algorithms
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - testimonials
+        -->
+
+          <section class="testimonials">
+            <h3 class="h3 testimonials-title">Experiences</h3>
+
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/logo 1.png"
+                      alt="Addis Ababa University"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Addis Ababa University
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      My experience as a guest lecturer at Addis Ababa
+                      University was incredibly rewarding. I had the opportunity
+                      to teach two courses: Cognitive Science to fifth-year
+                      undergraduate students and Data Structures and Algorithms
+                      to second-year undergraduates. Engaging with these bright
+                      minds, sharing my knowledge, and witnessing their
+                      enthusiasm for these fields was truly inspiring. It was a
+                      privilege to contribute to the academic community at Addis
+                      Ababa University, and I look forward to future
+                      opportunities to collaborate and inspire the next
+                      generation of scholars.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/logo 7.png"
+                      alt="Sumuni Creative Solutions"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Sumuni Creative Solutions
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      As a co-founder and software developer at Sumuni, we've
+                      built a platform that empowers entrepreneurs in developing
+                      countries. We provide comprehensive business development,
+                      due diligence, and matchmaking services, addressing the
+                      critical need for affordable and accessible resources. My
+                      work focuses on developing innovative software solutions
+                      that streamline these processes, helping entrepreneurs
+                      make their business ideas investment-ready and access the
+                      funding they need to thrive. It's incredibly rewarding to
+                      see Sumuni connect entrepreneurs with the resources they
+                      need to succeed and contribute to economic growth in
+                      emerging markets.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/logo 2.png"
+                      alt="UNOPS"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    UNOPS
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      During my internship at UNOPS, I gained valuable
+                      experience in various ICT areas, including Active
+                      Directory, Google Workspace, Windows Server, and network
+                      infrastructure. I also contributed to asset management and
+                      gained in-depth knowledge of oneUNOPS, the organization's
+                      integrated management system. My focus was on learning
+                      oneUNOPSCollect, a data collection tool used for projects
+                      across UNOPS, which provided me with practical insights
+                      into data management within the organization.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/logo 3.png"
+                      alt="Qemer Software Technology"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Qemer Software Technology
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      At Qemer Software Technology, I honed my skills as a
+                      Junior Programmer, working as a Fullstack Web Developer
+                      and Mobile Developer. My experience included building
+                      health and wellness applications for clients, contributing
+                      to the successful delivery of over five mobile and web
+                      applications. This role allowed me to gain valuable
+                      hands-on experience in both front-end and back-end
+                      development, expanding my knowledge and understanding of
+                      software development best practices.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/logo 5.png"
+                      alt="iCog Labs"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    iCog Labs
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      I'm currently embarking on an internship at iCog Labs, a
+                      leading AI research and development company in Addis
+                      Ababa. This internship is a valuable opportunity for me to
+                      further explore cutting-edge AGI AI and web3 research
+                      skills, complementing my Master's studies in AI. iCog Labs
+                      collaborates with international AI research groups and
+                      serves clients globally, specializing in areas like
+                      machine learning, computational linguistics, computer
+                      vision, and robotics. I'm excited to learn from their
+                      experienced team and contribute to their innovative
+                      projects, particularly those related to OpenCog, an
+                      open-source AI platform.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/logo 6.png"
+                      alt="SeEd Educational Center of Technology"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    SeEd Educational Center of Technology
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      As Programming School Coordinator at SeEd Educational
+                      Center of Technology, I had the rewarding experience of
+                      teaching young students, ages 7 to 15, the fundamentals of
+                      coding. I designed and delivered engaging lessons that
+                      fostered their interest in technology and problem-solving.
+                      My role involved creating a supportive learning
+                      environment where students could explore the world of
+                      coding, develop their critical thinking skills, and build
+                      a solid foundation for future success in technology.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - testimonials modal
+        -->
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were
+                    very pleased with the work done. She has a lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum
+                    dolor sit amet, ullamcous cididt consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels
+                    dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  MSc. in Artificial Intelligence, Addis Ababa University
+                </h4>
+
+                <span>Oct 2023 – Aug 2025</span>
+
+                <p class="timeline-text">
+                  I am expected to to graduate on 2025, I have done multiple
+                  survey papers, research and projects related to AI.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Software Engineering, Addis Ababa University
+                </h4>
+
+                <span>Nov 2017 – Aug 2022</span>
+
+                <p class="timeline-text">
+                  I graduated with great distinction, I have learned multiple
+                  programming concepts and languages.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Sumuni Creative Solutions, Co-Founder and Full-stack Developer
+                </h4>
+
+                <span>May 2023 — Present</span>
+
+                <p class="timeline-text">
+                  Utilize React, Laravel, and Flutter frameworks to develop
+                  cutting- edge software solutions. Collaborate with the team to
+                  address unique client needs and deliver tailored solutions.
+                  Apply expertise in programming languages and web development
+                  frameworks to enhance user experiences and improve operational
+                  efficiency. Take an active role in driving the success of
+                  Sumuni Creative Solutions by leveraging technology and
+                  delivering effective solutions.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">iCog Labs, Intern</h4>
+
+                <span>July 2024 — Present</span>
+
+                <p class="timeline-text">
+                  AGI intern for iCog Labs to let me explore ore on the field of
+                  AI and help me explore new technologies and research areas for
+                  my masters, I chose iCog Labs since it is the leading AI
+                  institution in Ethiopia.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">UNOPS, Intern</h4>
+
+                <span>Aug 2022 — May 2023</span>
+
+                <p class="timeline-text">
+                  Work with Active Directory, Google Workspace, Windows Server,
+                  Network Infrastructure, Asset Management, and oneUNOPS Closely
+                  learning oneUNOPSCollect, a data collection tool used for
+                  projects in UNOPS.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Sumuni Creative Solutions, Mobile Programmer
+                </h4>
+
+                <span>Apr 2022 – Aug 2022</span>
+
+                <p class="timeline-text">
+                  Worked as a mobile developer for Android and IOS.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  FoodFight, Software Engineering Intern
+                </h4>
+
+                <span>Aug 2022 – Nov 2022</span>
+
+                <p class="timeline-text">
+                  I was an intern for a 3 months. I participated on the mobile
+                  application using Flutter. It was a remote job where I did on
+                  my spare time, 20 hours per week.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Qemer Software Technology, Junior Programmer
+                </h4>
+
+                <span>Jun 2021 – Aug 2022</span>
+
+                <p class="timeline-text">
+                  I worked as a Fullstack Web Developer and Mobile Developer. I
+                  have created health and wellness applications for clients.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Bitweavers, Intern Developer
+                </h4>
+
+                <span>Jul 2021 – Nov 2021</span>
+
+                <p class="timeline-text">
+                  Worked as a developer for this giant corporation specializing
+                  in hospital management applications. Developed commercial
+                  skills working with Spring framework, Docker, and Vue.js.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  SeEd Educational Center of Technology, Programming School
+                  Coordinator
+                </h4>
+
+                <span>Jun 2020 – Jun 2022</span>
+
+                <p class="timeline-text">
+                  Instruct young students on the basics of coding.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web design</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web development</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web design</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-1.jpg"
+                      alt="finance"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Finance</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-2.png"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Orizon</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-3.jpg"
+                      alt="fundo"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Fundo</h3>
+
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-4.png"
+                      alt="brawlhalla"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Brawlhalla</h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-5.png"
+                      alt="dsm."
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">DSM.</h3>
+
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-6.png"
+                      alt="metaspark"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">MetaSpark</h3>
+
+                  <p class="project-category">Web design</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-7.png"
+                      alt="summary"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Summary</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-8.jpg"
+                      alt="task manager"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Task Manager</h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-9.png"
+                      alt="arrival"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Arrival</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          
+
+          
+        </article>
+
+        <!--
+        - #BLOG
+      -->
+
+      <article class="skill" data-page="skill">
+        <header>
+          <h2 class="h2 article-title">Technical Skills</h2>
+        </header>
+
+        <section class="blog-posts">
+          <section class="skill">
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Mobile Application Development — Flutter/dart, Android/Java,
+                    Android/kotlin
+                  </h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Web Programming — HTML5, CSS3, Javascript, Spring boot,
+                    React, PHP, Golang, Vue.js, Node.js, Laravel
+                  </h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Version Control — github, bitbucket</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Programming Languages — C#, PHP, C, JAVA, GO, PYTHON
+                  </h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Data Collection — oneUNOPSCollect</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Task Planning and Management — Trello, Jira
+                  </h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Database — Postgres, MongoDb, MsSql, Oracle
+                  </h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Networking | Office Installations — Office Setup and
+                    Meetings | ICT Management Services
+                  </h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Windows Server | Active Directory | Google Suite
+                    Applications
+                  </h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">
+                    Networking | ERP Systems — oneUNOPS | Other Hobies —
+                    ITSecurity, UI Design(Figma), CCNA
+                  </h5>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        
+      </article>
+
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Certifications</h2>
+          </header>
+
+          <section class="blog-posts">
+            <section class="skill">
+              <ul class="skills-list content-card">
+                <li class="skills-item">
+                  <h5 class="h5">Google Workspace Part 1 from UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Google Workspace Part 2 from UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Information Security Training from UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Ethics and Integrity from UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Management Styles from UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Project Management E-Learning from UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Result Based Management (RBM) from UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Google Sheets - Advanced</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Google Docs - Advanced</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Basic Asset Management (BAM) - Chapter 1</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Basic Asset Management (BAM) - Chapter 2</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">PQMS Learning Course</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">OneUNOPS Collect</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Enterprise Risk Management (ERM) in UNOPS</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Build your laravel Skills</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Building RESTful APIs in Laravel</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Learning PHP</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Flutter Essential Training: Build for Multiple Platforms</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">React.js Essential Training</h5>
+                </li>
+                <li class="skills-item">
+                  <h5 class="h5">Advanced Laravel</h5>
+                </li>
+              </ul>
+            </section>  
+          </section>
+
+          
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                width="400"
+                height="300"
+                loading="lazy"
+              ></iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
+
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
