@@ -287,9 +287,52 @@ article.active {
   z-index: -1;
 }
 
+/*-----------------------------------*\
+  #BUTTONS
+\*-----------------------------------*/
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: var(--fs-6);
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition-1);
+  box-shadow: var(--shadow-3);
+}
 
+.btn ion-icon { font-size: 18px; }
 
+.btn-primary {
+  position: relative;
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--bg-gradient-yellow-1);
+}
+
+.btn-primary:hover::before,
+.btn-primary:focus::before {
+  background: var(--bg-gradient-yellow-2);
+}
 
 /*-----------------------------------*\
   #MAIN
@@ -660,6 +703,18 @@ main {
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.testimonials-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .testimonials-item-title { margin-bottom: 7px; }

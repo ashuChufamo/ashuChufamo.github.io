@@ -18,13 +18,11 @@
     <meta name="twitter:image" content="https://ashuchufamo.github.io/assets/images/ashu.jpg" />
 
     <!--
-    - favicon
+    - favicon / app icons
   -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.ico"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="./assets/images/ai.png" type="image/png" />
+    <link rel="alternate icon" href="./assets/images/logo.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#0b0b0b" />
 
     <!--
     - custom css link
@@ -83,9 +81,18 @@
             
             <!-- CV Download Button -->
             <div style="margin-top:10px;">
-              <a href="./Ashenafi-Chufamo-FlowCV-Resume-20250828.pdf" download class="contact-link" style="display:inline-flex;align-items:center;gap:8px;">
-                <ion-icon name="download-outline"></ion-icon>
-                <span>Download CV</span>
+              <a
+                id="download-cv"
+                href="./Ashenafi-Chufamo-FlowCV-Resume-20250828.pdf"
+                class="contact-link btn btn-primary"
+                download
+                target="_blank"
+                rel="noopener"
+                type="application/pdf"
+                aria-label="Download CV (PDF)"
+              >
+                <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                <span>Download CV (PDF)</span>
               </a>
             </div>
           </div>
@@ -225,7 +232,7 @@
             </li>
 
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Blog</button>
+              <button class="navbar-link" data-nav-link>Certifications</button>
             </li>
 
             <li class="navbar-item">
@@ -357,6 +364,54 @@
             <h3 class="h3 testimonials-title">Experiences</h3>
 
             <ul class="testimonials-list has-scrollbar">
+              <!-- Prioritize: ArifPay and HABTech on About page experiences -->
+              <li class="testimonials-item project-card">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/arifpay.png"
+                      alt="ArifPay"
+                      width="60"
+                      loading="lazy"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                    ArifPay Financial Solutions — Data Science Engineer
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Leading the AI team. Built transactions Data Warehouse and executive dashboards; delivered recommender systems; building fraud detection & credit scoring; developing a services RAG chatbot.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item project-card">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/habtech.png"
+                      alt="HABTech"
+                      width="60"
+                      loading="lazy"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                    HABTech Solutions — AI Engineering Intern
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Built medical RAG/ML models; integrated AI with EMR for AARHB; created medical history summarizer; CBHI backend; building prompt-based big data visualization.
+                    </p>
+                  </div>
+                </div>
+              </li>
               <li class="testimonials-item project-card">
                 <div class="content-card" data-testimonials-item>
                   <figure class="testimonials-avatar-box">
@@ -574,6 +629,56 @@
                   </div>
                 </div>
               </li>
+
+              <!-- Added: Arifpay Experience -->
+              <li class="testimonials-item project-card">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/arifpay.png"
+                      alt="Arifpay"
+                      width="60"
+                      loading="lazy"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                    Arifpay
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Built AI models and data systems including fraud detection and data warehousing initiatives.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Added: HABTech Experience -->
+              <li class="testimonials-item project-card">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/habtech.png"
+                      alt="HABTech"
+                      width="60"
+                      loading="lazy"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                    HABTech
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Led AI integration and engineering efforts across products.
+                    </p>
+                  </div>
+                </div>
+              </li>
             </ul>
           </section>
 
@@ -679,6 +784,36 @@
             </div>
 
             <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  ArifPay Financial Solutions, Data Science Engineer — Addis Ababa, Ethiopia
+                </h4>
+
+                <span>Nov 2024 — Present</span>
+
+                <p class="timeline-text">
+                  Leading the ArifPay AI Team. Built a transactions Data Warehouse and executive dashboard.
+                  Maintain regular data processing and cleaning pipelines. Delivered E-commerce and media
+                  recommendation systems (TV news and movies). Currently building Fraud Detection models for
+                  financial transactions and a Financial Credit Scoring model using transactional data. Also
+                  developing a RAG chatbot for ArifPay services.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  HABTech Solutions, AI Engineering Intern — Addis Ababa, Ethiopia
+                </h4>
+
+                <span>Jul 2024 — Present</span>
+
+                <p class="timeline-text">
+                  Built medical RAG and ML models and integrated AI solutions into EMR for the Addis Ababa
+                  Regional Health Bureau, including a medical history summarizer per client. Backend Engineer
+                  for CBHI government project. Currently developing a prompt-based visualization tool for
+                  large-scale data.
+                </p>
+              </li>
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">
                   Addis Ababa University, Assistant Lecturer
@@ -807,7 +942,48 @@
             </ol>
           </section>
 
-          
+          <section class="skills">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Skills</h3>
+            </div>
+
+            <ul class="skills-list">
+              <li class="skills-item">Machine Learning</li>
+              <li class="skills-item">Deep Learning</li>
+              <li class="skills-item">Natural Language Processing</li>
+              <li class="skills-item">Computer Vision</li>
+              <li class="skills-item">Data Science</li>
+              <li class="skills-item">Data Engineering</li>
+              <li class="skills-item">Full Stack Development</li>
+              <li class="skills-item">Cloud Computing</li>
+              <li class="skills-item">DevOps</li>
+            </ul>
+          </section>
+
+          <section class="certifications">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Certifications</h3>
+            </div>
+
+            <ol class="certifications-list">
+              <li class="certifications-item">
+                <h4 class="h4 certifications-item-title">Certified Data Scientist</h4>
+                <span>Data Science Council of America</span>
+              </li>
+              <li class="certifications-item">
+                <h4 class="h4 certifications-item-title">Certified Machine Learning Engineer</h4>
+                <span>International Association for Machine Learning and Artificial Intelligence</span>
+              </li>
+            </ol>
+          </section>
         </article>
 
         <!--
@@ -821,21 +997,10 @@
 
           <section class="projects">
             <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Web design</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Applications</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Web development</button>
-              </li>
+              <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+              <li class="filter-item"><button data-filter-btn>AI/ML</button></li>
+              <li class="filter-item"><button data-filter-btn>Recommender</button></li>
+              <li class="filter-item"><button data-filter-btn>Computer Vision</button></li>
             </ul>
 
             <div class="filter-select-box">
@@ -850,238 +1015,248 @@
               </button>
 
               <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Web design</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Applications</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Web development</button>
-                </li>
+                <li class="select-item"><button data-select-item>All</button></li>
+                <li class="select-item"><button data-select-item>AI/ML</button></li>
+                <li class="select-item"><button data-select-item>Recommender</button></li>
+                <li class="select-item"><button data-select-item>Computer Vision</button></li>
               </ul>
             </div>
 
             <ul class="project-list">
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
+              <!-- AI/ML projects at top -->
+              <li class="project-item active" data-filter-item data-category="ai/ml">
                 <a href="#">
                   <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-1.jpg"
-                      alt="finance"
-                      loading="lazy"
-                    />
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/chatbot.webp" alt="Arifpay Product Chatbot" loading="lazy" />
                   </figure>
-
-                  <h3 class="project-title">Finance</h3>
-
-                  <p class="project-category">Web development</p>
+                  <h3 class="project-title">Arifpay Product Chatbot</h3>
+                  <p class="project-category">Chatbot • AI/ML</p>
                 </a>
               </li>
 
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
+              <li class="project-item active" data-filter-item data-category="ai/ml">
                 <a href="#">
                   <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-2.png"
-                      alt="orizon"
-                      loading="lazy"
-                    />
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/hatespeech.jpeg" alt="Multilingual Hate Speech Detection (Arts TV & FM)" loading="lazy" />
                   </figure>
-
-                  <h3 class="project-title">Orizon</h3>
-
-                  <p class="project-category">Web development</p>
+                  <h3 class="project-title">Multilingual Hate Speech Detection</h3>
+                  <p class="project-category">AI/ML • NLP</p>
                 </a>
               </li>
 
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
+              <!-- Recommender systems -->
+              <li class="project-item active" data-filter-item data-category="recommender">
                 <a href="#">
                   <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-3.jpg"
-                      alt="fundo"
-                      loading="lazy"
-                    />
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/movierecommendation.jpg" alt="Movie Recommendation for Arts TV" loading="lazy" />
                   </figure>
-
-                  <h3 class="project-title">Fundo</h3>
-
-                  <p class="project-category">Web design</p>
+                  <h3 class="project-title">Movie Recommendation (Arts TV)</h3>
+                  <p class="project-category">Recommender</p>
                 </a>
               </li>
 
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
+              <li class="project-item active" data-filter-item data-category="recommender">
                 <a href="#">
                   <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-4.png"
-                      alt="brawlhalla"
-                      loading="lazy"
-                    />
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/fmrecommendation.png" alt="FM Content Recommendation" loading="lazy" />
                   </figure>
+                  <h3 class="project-title">FM Content Recommendation</h3>
+                  <p class="project-category">Recommender</p>
+                </a>
+              </li>
 
-                  <h3 class="project-title">Brawlhalla</h3>
+              <li class="project-item active" data-filter-item data-category="recommender">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/ecommerce.webp" alt="E-commerce Recommender" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">E-commerce Recommender</h3>
+                  <p class="project-category">Recommender</p>
+                </a>
+              </li>
 
+              <li class="project-item active" data-filter-item data-category="recommender">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/news.jpg" alt="News Recommendation" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">News Recommendation</h3>
+                  <p class="project-category">Recommender</p>
+                </a>
+              </li>
+
+              <!-- Computer Vision -->
+              <li class="project-item active" data-filter-item data-category="computer vision">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/platedetectoin.png" alt="License Plate Detection System" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">License Plate Detection System</h3>
+                  <p class="project-category">Computer Vision</p>
+                </a>
+              </li>
+
+              <!-- Added portfolio items from user's list -->
+              <!-- EMR AI Integration (Phase I) -->
+              <li class="project-item active" data-filter-item data-category="ai/ml">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/SmartEMR2.webp" alt="EMR - AI Integration for Addis Ababa Regional Health Bureau" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">EMR - AI Integration (AARHB)</h3>
+                  <p class="project-category">AI/ML</p>
+                </a>
+              </li>
+
+              <!-- EMR AI Integration (Phase II - RAG Summarizer) -->
+              <li class="project-item active" data-filter-item data-category="ai/ml">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/smartEMR.avif" alt="EMR - AI Integration Phase II: RAG Medical History Summarizer" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">EMR - AI Integration Phase II (RAG Summarizer)</h3>
+                  <p class="project-category">AI/ML</p>
+                </a>
+              </li>
+
+              <!-- Fraud Detection with ArifPay -->
+              <li class="project-item active" data-filter-item data-category="ai/ml">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/fraud management.jpg" alt="Fraud Detection with ArifPay Financial Solutions" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Fraud Detection with ArifPay</h3>
+                  <p class="project-category">AI/ML</p>
+                </a>
+              </li>
+
+              <!-- Data Warehouse Modeling (ETL/Big Data) -->
+              <li class="project-item active" data-filter-item data-category="ai/ml">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/datawarehouse.png" alt="Data Warehouse Modeling with Spark & Hadoop" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Data Warehouse Modeling (Spark & Hadoop)</h3>
+                  <p class="project-category">AI/ML</p>
+                </a>
+              </li>
+
+              <!-- Explainable Credit Scoring -->
+              <li class="project-item active" data-filter-item data-category="ai/ml">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/creditScore.jpg" alt="Explainable Credit Scoring" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Explainable Credit Scoring</h3>
+                  <p class="project-category">AI/ML</p>
+                </a>
+              </li>
+
+              <!-- Stock Market Analysis (PGM Course Project) -->
+              <li class="project-item active" data-filter-item data-category="ai/ml">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/stockmarket.jpg" alt="Stock Market Analysis using Probabilistic Models" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Stock Market Analysis (PGM)</h3>
+                  <p class="project-category">AI/ML</p>
+                </a>
+              </li>
+
+              <!-- Project Sumuni -->
+              <li class="project-item active" data-filter-item data-category="applications">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/sumuni.jpeg" alt="Project Sumuni platform" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Project Sumuni</h3>
                   <p class="project-category">Applications</p>
                 </a>
               </li>
 
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
+              <!-- Project Alen -->
+              <li class="project-item active" data-filter-item data-category="applications">
                 <a href="#">
                   <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-5.png"
-                      alt="dsm."
-                      loading="lazy"
-                    />
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/ecommerce.webp" alt="Project Alen health info app" loading="lazy" />
                   </figure>
-
-                  <h3 class="project-title">DSM.</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-6.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">MetaSpark</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-7.png"
-                      alt="summary"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Summary</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-8.jpg"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Task Manager</h3>
-
+                  <h3 class="project-title">Project Alen</h3>
                   <p class="project-category">Applications</p>
                 </a>
               </li>
 
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
+              <!-- Project Heipeus -->
+              <li class="project-item active" data-filter-item data-category="applications">
                 <a href="#">
                   <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-9.png"
-                      alt="arrival"
-                      loading="lazy"
-                    />
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/hepies.jpg" alt="Project Heipeus social media for health professionals" loading="lazy" />
                   </figure>
+                  <h3 class="project-title">Project Heipeus</h3>
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
 
-                  <h3 class="project-title">Arrival</h3>
+              <!-- Project MallEt -->
+              <li class="project-item active" data-filter-item data-category="applications">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/mallet.png" alt="Project MallEt building access app" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Project MallEt</h3>
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
 
-                  <p class="project-category">Web development</p>
+              <!-- Food Fight -->
+              <li class="project-item active" data-filter-item data-category="applications">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/ecommerce.webp" alt="Food Fight mobile app" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Food Fight</h3>
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <!-- FixIt -->
+              <li class="project-item active" data-filter-item data-category="applications">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/fixit.png" alt="FixIt technician-client matching app" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">FixIt</h3>
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <!-- Crime Investigation System -->
+              <li class="project-item active" data-filter-item data-category="applications">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/projectIcons/crimeinvestigation.webp" alt="Crime Investigation System graduation project" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Crime Investigation System</h3>
+                  <p class="project-category">Applications</p>
                 </a>
               </li>
             </ul>
@@ -1093,7 +1268,7 @@
         </article>
 
         <!--
-        - #BLOG
+        - #CERTIFICATIONS
       -->
 
       <article class="skill" data-page="skill">
@@ -1101,105 +1276,29 @@
           <h2 class="h2 article-title">Technical Skills</h2>
         </header>
 
-        <section class="blog-posts">
-          <section class="skill">
-
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Mobile Application Development — Flutter/dart, Android/Java,
-                    Android/kotlin
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Web Programming — HTML5, CSS3, Javascript, Spring boot,
-                    React, PHP, Golang, Vue.js, Node.js, Laravel
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Version Control — github, bitbucket</h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Programming Languages — C#, PHP, C, JAVA, GO, PYTHON
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Collection — oneUNOPSCollect</h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Task Planning and Management — Trello, Jira
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Database — Postgres, MongoDb, MsSql, Oracle
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Networking | Office Installations — Office Setup and
-                    Meetings | ICT Management Services
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Windows Server | Active Directory | Google Suite
-                    Applications
-                  </h5>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">
-                    Networking | ERP Systems — oneUNOPS | Other Hobies —
-                    ITSecurity, UI Design(Figma), CCNA
-                  </h5>
-                </div>
-              </li>
-            </ul>
-          </section>
+        <section class="skills">
+          <ul class="skills-list content-card">
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Natural Language Processing (NLP) — Transformers, Tokenization, NER, Text Classification, Summarization</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Computer Vision — CNNs, Object Detection, OCR, OpenCV</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Recommender Systems — Collaborative/Content-based, Ranking, Implicit Feedback</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">LLMs & RAG — Prompt Engineering, Retrieval Pipelines, Evaluation</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Modeling — PyTorch, TensorFlow, scikit-learn, XGBoost, LightGBM</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">MLOps — Experiment Tracking, Model Serving, Docker, CI/CD</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Data Engineering — Spark, Hadoop, Airflow, ETL/ELT, Data Warehousing</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Databases — PostgreSQL, MySQL, MongoDB</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Cloud & Deployment — Docker, Kubernetes (basic), REST APIs</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Tools — Hugging Face, LangChain/LlamaIndex, Pandas, NumPy</h5></div></li>
+          </ul>
         </section>
-
-        
       </article>
 
-        <article class="blog" data-page="blog">
+        <article class="blog" data-page="certifications">
           <header>
             <h2 class="h2 article-title">Certifications</h2>
           </header>
 
-          <section class="blog-posts">
-            <section class="skill">
-              <ul class="skills-list content-card">
+          <section class="certifications">
+            <ul class="skills-list content-card">
                 <li class="skills-item">
                   <h5 class="h5">Google Workspace Part 1 from UNOPS</h5>
                 </li>
@@ -1260,8 +1359,7 @@
                 <li class="skills-item">
                   <h5 class="h5">Advanced Laravel</h5>
                 </li>
-              </ul>
-            </section>  
+            </ul>
           </section>
 
           

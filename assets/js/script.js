@@ -115,6 +115,44 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
+// set default filter to AI/ML on load if available
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    // Update visitor counter (if present)
+    const viewEl = document.getElementById("view-counter");
+    if (viewEl) {
+      const namespace = "ashuchufamo.github.io";
+      const key = "portfolio_home";
+      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+        .then((r) => r.json())
+        .then((data) => {
+          const val = (data && (data.value ?? data.count)) || 0;
+          viewEl.textContent = Number(val).toLocaleString();
+        })
+        .catch(() => {
+          viewEl.textContent = "—";
+        });
+    }
+
+    const aiBtn = Array.from(filterBtn).find(
+      (b) => b.innerText.trim().toLowerCase() === "ai/ml"
+    );
+    if (aiBtn) {
+      // update select label
+      if (selectValue) selectValue.innerText = "AI/ML";
+      // apply filter
+      filterFunc("ai/ml");
+      // update active states
+      if (lastClickedBtn) lastClickedBtn.classList.remove("active");
+      aiBtn.classList.add("active");
+      lastClickedBtn = aiBtn;
+    }
+  } catch (e) {
+    // no-op if elements are missing
+  }
+});
+
+
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -156,4 +194,5 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+
 }
