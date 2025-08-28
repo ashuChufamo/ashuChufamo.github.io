@@ -73,6 +73,3 @@ Already configured for this repo: `https://ashuchufamo.github.io/`.
 - Publications section linking to ResearchGate
 - Optional contact form (Formspree)
 
-## License
-
-This project is licensed under the terms of the repository's `LICENSE` file.
