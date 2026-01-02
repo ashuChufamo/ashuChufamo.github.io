@@ -13,7 +13,7 @@ Live URL: https://ashuchufamo.github.io/
 - **Assets**: Downloadable CV, social links (GitHub, LinkedIn, ResearchGate)
 - **Animations**: Optional particles and subtle GSAP transitions
 
-## Project Structure
+## Project Structure 
 
 ```
 ├─ assets/
