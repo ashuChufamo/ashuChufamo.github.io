@@ -1,443 +1,444 @@
 /**
- * Central Portfolio Data Configuration (Comprehensive Edition)
- * Includes Zayno (https://zayno.io/), Alateon (Church donation app), ArifPay 12-project AI suite,
- * Technest Apps, Qemer Software Tech, Freelance, and AAU BSc Projects.
+ * Central Portfolio Data Configuration — Ashenafi Chufamo
+ * Narrative: Senior Software Engineer → AI/ML Engineer
+ * Grounded, technically credible, mature, and authentic.
  */
-
-window.portfolioStats = {
-  projects: "35+",
-  productionSystems: "20+",
-  aiSystems: "12",
-  yearsExperience: "5+",
-  technologies: "25+",
-  businessesServed: "30+"
-};
 
 window.personalInfo = {
   name: "Ashenafi Chufamo",
-  headline: "I Build Intelligent Systems That Solve Real-World Problems.",
-  subtitle: "AI-Software Engineer • Tech Lead • Researcher • Cofounder",
+  headline: "Senior Software Engineer building toward AI/ML.",
+  subtitle: "Software Engineering · Applied AI/ML · Product Development",
   email: "chufamoashenafi@gmail.com",
   phone: "+251 (944) 060-864",
   location: "Addis Ababa, Ethiopia",
   github: "https://github.com/ashuChufamo",
   linkedin: "https://et.linkedin.com/in/ashenafi-chufamo-bab330185",
   facebook: "https://www.facebook.com/ashenafichufamo1",
-  bio: `Senior AI-Software Engineer, Tech Lead at ArifPay, and Cofounder at Sumuni (Technest). With an MSc in Artificial Intelligence from Addis Ababa University and 4 semesters of university lecturing experience (teaching Data Structures & Algorithms, Cognitive Science, and Math for AI), I engineer end-to-end intelligent software systems from Concept → Architecture → Production.`
+  bio: "I am a software engineer with several years of experience building applications and production systems. After completing my Master's degree in Artificial Intelligence at Addis Ababa University, I began moving deeper into AI and machine learning through practical work on production systems at ArifPay as a Data Science Engineer. Alongside that work, I continue building software products and AI/agentic systems as a cofounder at Technest/Sumuni."
 };
 
 /* --------------------------------------------------------------------------
-   ARIFPAY AI & PRODUCT SUITE (12 Projects)
+   1. THE TRANSITION TIMELINE (Software Engineering → AI)
    -------------------------------------------------------------------------- */
-window.arifPayData = {
-  role: "Tech Lead — ArifPay",
+window.careerTransition = [
+  {
+    step: "01",
+    phase: "Software Engineering",
+    title: "Software Engineer",
+    desc: "Built applications, mobile platforms, and core software systems. Developed a strong engineering foundation in backend logic, databases, APIs, and client applications."
+  },
+  {
+    step: "02",
+    phase: "Senior Software Engineer",
+    title: "Senior Software Engineer",
+    desc: "Expanded experience into software architecture, production systems, scalable backend infrastructure, mobile applications (Flutter), and full product development lifecycle."
+  },
+  {
+    step: "03",
+    phase: "MSc in Artificial Intelligence",
+    title: "MSc in AI — Addis Ababa University",
+    desc: "Completed Master's degree focusing on Machine Learning, Deep Learning, Knowledge Distillation, Model Compression, and Explainable AI (SHAP)."
+  },
+  {
+    step: "04",
+    phase: "Data Science Engineer — ArifPay",
+    title: "Data Science Engineer",
+    desc: "Applied AI/ML and data engineering to real production and business problems, working on fraud detection, credit scoring, churn prediction, recommendation systems, and reporting pipelines."
+  },
+  {
+    step: "05",
+    phase: "AI + Software + Products",
+    title: "Cofounder & Engineer",
+    desc: "Combining software engineering foundation with applied AI and agentic systems while building products as a cofounder at Technest/Sumuni."
+  }
+];
+
+/* --------------------------------------------------------------------------
+   2. SOFTWARE I'VE BUILT (Software Engineering Foundation)
+   -------------------------------------------------------------------------- */
+window.softwareBuilt = [
+  {
+    title: "USP Airport Parking System Suite",
+    category: "Smart Infrastructure & Revenue Management",
+    desc: "Designed and developed the mobile apps and backend components for automated airport parking gate control, ticket validation, cashier management, and subscription billing.",
+    role: "Lead Software & Mobile Engineer",
+    tech: ["Flutter", "Node.js", "PostgreSQL", "Hardware Integration"],
+    image: "./assets/images/usp.jpeg",
+    subApps: [
+      "Ethiopian Airport Parking System (Flutter)",
+      "Airport Parking Attendant App (Flutter)",
+      "Airport Parking Cashier App (Web)",
+      "Airport Parking Admin App (Web)",
+      "Penalty & Subscription QR Payment (Web)"
+    ]
+  },
+  {
+    title: "Addis Parking & Mobility Suite",
+    category: "Smart City Mobility Platform",
+    desc: "Built street parking management and tow truck dispatch mobile applications for urban parking supervisors and field attendants.",
+    role: "Software & Mobile Engineer",
+    tech: ["Flutter", "React", "Node.js", "PostgreSQL"],
+    image: "./assets/images/usp.jpeg",
+    subApps: [
+      "Attendant App (Flutter)",
+      "Parking Supervisor App (Flutter)",
+      "Addis Tow Truck App (Flutter)"
+    ]
+  },
+  {
+    title: "Atrip Rental & Mobility Suite",
+    category: "Vehicle Rental & Logistics",
+    desc: "Developed vehicle rental mobile applications connecting car rental company owners with drivers and fleet operations.",
+    role: "Mobile & Backend Engineer",
+    tech: ["Flutter", "React", "Laravel API", "PostgreSQL"],
+    image: "./assets/images/project-8.jpg",
+    subApps: [
+      "Atrip Rental Owner App (Flutter)",
+      "Atrip Rental Drivers App (Flutter)"
+    ]
+  },
+  {
+    title: "Alateon",
+    category: "Church Community & Donation App",
+    desc: "Built spiritual content streaming application and mobile donation platform for the Ethiopian Orthodox Tewahedo Church community.",
+    role: "Full-Stack Software Engineer",
+    tech: ["Flutter", "Node.js", "PostgreSQL", "Payment Gateway APIs"],
+    image: "./assets/images/project-3.jpg"
+  },
+  {
+    title: "Custom Stock Management System",
+    category: "Enterprise Inventory Control",
+    desc: "Designed and built inventory tracking system managing multi-warehouse stock levels, purchase order workflows, and supplier audit trails.",
+    role: "Software Engineer",
+    tech: ["React", "Node.js", "MySQL", "Docker"],
+    image: "./assets/images/project-4.png"
+  },
+  {
+    title: "Technest SMS Service Gateway",
+    category: "Enterprise Communications",
+    desc: "Contributed to high-throughput bulk SMS gateway API platform handling transactional alerts and telecommunication provider integrations.",
+    role: "Backend Software Engineer",
+    tech: ["Node.js", "Go", "Redis", "MySQL", "SMPP Protocol"],
+    image: "./assets/images/project-1.jpg"
+  }
+];
+
+/* --------------------------------------------------------------------------
+   3. APPLIED AI AT ARIFPAY (Data Science Engineer)
+   -------------------------------------------------------------------------- */
+window.arifPayAI = {
+  role: "Data Science Engineer — ArifPay",
   period: "2024 — Present",
-  summary: "Directing engineering, AI integration, merchant intelligence, data pipelines, regulatory compliance reporting, and production infrastructure for payment systems in Ethiopia.",
-  products: [
+  summary: "Worked on practical AI/ML models, data pipelines, predictive algorithms, reporting dashboards, and agentic workflows to support payment infrastructure and merchant operations in Ethiopia.",
+  projects: [
     {
-      title: "Arifpay Product Chatbot",
-      category: "Chatbot • AI/ML",
-      desc: "Multilingual conversational AI agent assisting merchants and users with payment inquiries, transaction troubleshooting, and product support.",
-      tech: ["Python", "LangChain", "LLMs", "FastAPI"],
-      image: "./assets/images/project-1.jpg"
-    },
-    {
-      title: "Multilingual Hate Speech Detection",
-      category: "AI/ML • NLP",
-      desc: "NLP classifier identifying hate speech and toxic content across Amharic, Afan Oromo, and English text data.",
-      tech: ["PyTorch", "Hugging Face", "Transformers", "spaCy"],
-      image: "./assets/images/ai.png"
-    },
-    {
-      title: "Fraud Detection with ArifPay",
-      category: "AI/ML • Security",
-      desc: "Real-time anomaly detection engine evaluating high-frequency payment transaction risks under 50ms latency.",
-      tech: ["PyTorch", "XGBoost", "Apache Spark", "Redis"],
-      image: "./assets/images/project-8.jpg"
-    },
-    {
-      title: "Data Warehouse (Spark & Hadoop)",
-      category: "AI/ML • Data Engineering",
-      desc: "Distributed big data architecture processing millions of payment logs for business intelligence and regulatory compliance.",
-      tech: ["Apache Spark", "Hadoop", "PostgreSQL", "Metabase"],
-      image: "./assets/images/project-6.png"
+      title: "Fraud Detection System",
+      category: "Machine Learning • Fraud Prevention",
+      desc: "Worked with the engineering team to build rule-based and anomaly detection models targeting suspicious payment transactions and risk scoring.",
+      tech: ["Python", "scikit-learn", "Pandas", "PostgreSQL"],
+      image: "./assets/images/project-4.png"
     },
     {
       title: "Explainable Credit Scoring",
-      category: "AI/ML • Fintech",
-      desc: "Alternative data credit scoring engine using SHAP explainable AI for merchant micro-loan underwriting.",
-      tech: ["Python", "SHAP", "XGBoost", "FastAPI"],
-      image: "./assets/images/project-7.png"
+      category: "Machine Learning • Credit Analytics",
+      desc: "Developed credit evaluation model for merchant micro-loans using SHAP (SHapley Additive exPlanations) to ensure interpretable risk factors.",
+      tech: ["XGBoost", "SHAP", "Python", "FastAPI"],
+      image: "./assets/images/ai.png"
     },
     {
-      title: "Arifcare AI-based Diagnosis",
-      category: "AI/ML • Healthcare / USP",
-      desc: "Healthcare diagnostic assistant leveraging machine learning for preliminary symptom analysis and medical triage.",
-      tech: ["Python", "TensorFlow", "Scikit-Learn", "REST API"],
-      image: "./assets/images/project-3.jpg"
-    },
-    {
-      title: "OCR Detection for Amharic Handwritten Text",
-      category: "AI/ML • Computer Vision & NLP",
-      desc: "Deep learning vision system extracting and digitizing handwritten Amharic text from official documents and forms.",
-      tech: ["OpenCV", "PyTorch", "CNNs", "Python"],
-      image: "./assets/images/project-9.png"
-    },
-    {
-      title: "Movie Recommendation (Arts TV)",
-      category: "Recommender System",
-      desc: "Personalized video content recommendation engine deployed for Arts TV streaming app users.",
-      tech: ["TensorFlow", "Python", "Flutter Integration"],
-      image: "./assets/images/project-3.jpg"
-    },
-    {
-      title: "FM Content Recommendation",
-      category: "Recommender System",
-      desc: "Personalized audio & FM radio stream recommendation algorithm based on user listening history.",
-      tech: ["PyTorch", "Python", "Redis"],
-      image: "./assets/images/project-5.png"
-    },
-    {
-      title: "E-commerce Recommender",
-      category: "Recommender System",
-      desc: "High-throughput product recommendation pipeline for merchant digital storefronts.",
-      tech: ["Python", "Scikit-Learn", "PostgreSQL"],
+      title: "Customer Churn Prediction",
+      category: "Machine Learning • Merchant Retention",
+      desc: "Contributed to predictive classification pipeline identifying merchant churn indicators based on transaction frequency patterns.",
+      tech: ["Python", "scikit-learn", "LightGBM", "Metabase"],
       image: "./assets/images/project-2.png"
     },
     {
-      title: "News Recommendation",
-      category: "Recommender System",
-      desc: "Real-time news article recommendation system ranking articles based on topic preference and trending topics.",
-      tech: ["Python", "NLP", "FastAPI"],
+      title: "Amharic Handwritten OCR Detection",
+      category: "Computer Vision • Document AI",
+      desc: "Worked on optical character recognition models to extract text from handwritten Amharic payment receipts and documents.",
+      tech: ["PyTorch", "OpenCV", "CNNs", "FastAPI"],
+      image: "./assets/images/ai-removebg-preview (1).png"
+    },
+    {
+      title: "Content & Merchant Recommendation Engines",
+      category: "Recommendation Systems",
+      desc: "Implemented collaborative filtering and content-based recommendation pipelines for FM radio streams, media content, and e-commerce platforms.",
+      tech: ["Python", "Surprise", "Implicit", "Redis"],
       image: "./assets/images/project-1.jpg"
     },
     {
-      title: "License Plate Detection System",
-      category: "Computer Vision",
-      desc: "Edge computer vision ALPR system recognizing vehicle license plates in real-time.",
-      tech: ["YOLOv8", "OpenCV", "PyTorch"],
-    image: "./assets/images/usp.jpeg"
+      title: "Financial Reporting & Analytics Dashboards",
+      category: "Data Engineering • Business Intelligence",
+      desc: "Built data aggregation jobs and reporting dashboards for transaction volumes, merchant analytics, and regulatory reporting.",
+      tech: ["Spark", "Hadoop", "SQL", "Metabase"],
+      image: "./assets/images/project-7.png"
+    },
+    {
+      title: "Marketing & Business Intelligence Agents",
+      category: "AI / Agents • Workflow Automation",
+      desc: "Developed prototype LLM agent workflows for merchant prospect analysis, competitive intelligence, and partnership outreach support.",
+      tech: ["LangChain", "LLMs", "Python", "FastAPI"],
+      image: "./assets/images/project-1.jpg"
     }
   ]
 };
 
 /* --------------------------------------------------------------------------
-   TECHNEST / SUMUNI PRODUCT SUITE
+   4. INTERACTIVE APPLIED AI CASE STUDIES
    -------------------------------------------------------------------------- */
-window.sumuniData = {
-  role: "Cofounder & Tech Lead — Sumuni / Technest",
-  period: "2022 — Present",
-  summary: "Co-founded Sumuni Creative Solutions / Technest. Technical lead for flagship enterprise products including Zayno (https://zayno.io/), Alateon, Airport Parking Suite, Mobility Apps, and SMS Service Gateway.",
-  projects: [
+window.appliedAICaseStudies = [
+  {
+    id: "cs-fraud-detection",
+    title: "Production Fraud Detection & Risk Scoring",
+    category: "Machine Learning",
+    summary: "Anomaly detection and transaction risk scoring for payment processing.",
+    problem: "Identifying potential fraudulent payment activities in real-time without introducing excessive latency or false positives for legitimate merchants.",
+    approach: "Combined rule-based filtering with supervised classification (XGBoost) and anomaly detection algorithms trained on historical transaction behavior patterns.",
+    contribution: "Worked on data preprocessing, feature engineering (velocity features, device fingerprinting signals), model evaluation, and deployment of scoring API endpoints.",
+    tech: ["Python", "XGBoost", "scikit-learn", "PostgreSQL", "FastAPI"],
+    image: "./assets/images/project-4.png"
+  },
+  {
+    id: "cs-credit-scoring",
+    title: "Explainable Credit Scoring Model",
+    category: "Machine Learning",
+    summary: "Interpretable merchant credit scoring utilizing SHAP explainability.",
+    problem: "Evaluating merchant creditworthiness for micro-loans where non-blackbox decisions are required for compliance and risk transparency.",
+    approach: "Trained gradient boosted trees on merchant transaction history, repayment records, and volume stability, utilizing SHAP (SHapley Additive exPlanations) to explain feature contributions for every score.",
+    contribution: "Designed feature extraction pipelines, implemented model training scripts, generated SHAP breakdown charts for loan officers, and served API predictions.",
+    tech: ["Python", "XGBoost", "SHAP", "Pandas", "FastAPI"],
+    image: "./assets/images/ai.png"
+  },
+  {
+    id: "cs-churn-prediction",
+    title: "Merchant Churn Prediction Pipeline",
+    category: "Machine Learning",
+    summary: "Predictive model identifying merchants at risk of becoming inactive.",
+    problem: "Merchant retention teams needed early warning signals before merchants stopped processing payments.",
+    approach: "Built a binary classification pipeline analyzing recency, frequency, monetary (RFM) indicators, transaction drops, and support interaction triggers.",
+    contribution: "Contributed to data extraction from data warehouse, model training, cross-validation tuning, and automated weekly alert reporting for account managers.",
+    tech: ["Python", "LightGBM", "scikit-learn", "SQL", "Metabase"],
+    image: "./assets/images/project-2.png"
+  },
+  {
+    id: "cs-plate-recognition",
+    title: "Automated License Plate Recognition (ALPR)",
+    category: "Computer Vision",
+    summary: "Vehicle plate detection and text recognition at parking gates.",
+    problem: "Automating parking gate check-in and check-out to reduce congestion and manual ticket issuance at commercial parking facilities.",
+    approach: "Utilized YOLOv8 object detection to locate license plate regions from IP camera video streams, followed by OCR text extraction tuned for Ethiopian plate formats.",
+    contribution: "Worked on image dataset annotation, YOLO model fine-tuning, camera stream integration, and connecting detection events to parking gate relay systems.",
+    tech: ["YOLOv8", "OpenCV", "PyTorch", "Python", "FastAPI"],
+    image: "./assets/images/usp.jpeg"
+  },
+  {
+    id: "cs-recommendation-engine",
+    title: "FM Content & Media Recommendation System",
+    category: "Recommendation",
+    summary: "Content recommendation pipeline for media streaming platforms.",
+    problem: "Personalizing content feeds for listeners based on past radio station preferences, time of day, and category affinity.",
+    approach: "Implemented matrix factorization (implicit collaborative filtering) combined with content-based tagging to generate personalized station and track recommendations.",
+    contribution: "Developed offline recommendation batch jobs, vector embedding index generation, and fast recommendation lookup API endpoints.",
+    tech: ["Python", "Implicit", "Surprise", "Redis", "FastAPI"],
+    image: "./assets/images/project-1.jpg"
+  },
+  {
+    id: "cs-ai-agents",
+    title: "Market & Sales Intelligence Agentic Workflows",
+    category: "AI / Agents",
+    summary: "LLM-powered research agent summarizing prospective merchant data.",
+    problem: "Sales and business development teams spent substantial time manually researching business directories, corporate sites, and merchant web presence.",
+    approach: "Designed multi-step LLM agent pipelines using LangChain to search merchant directories, extract contact information, summarize product portfolios, and generate sales lead profiles.",
+    contribution: "Built agent tool integrations, prompt templates, web scraping modules, and lead scoring summary exports.",
+    tech: ["Python", "LangChain", "LLMs", "FastAPI", "BeautifulSoup"],
+    image: "./assets/images/project-1.jpg"
+  }
+];
+
+/* --------------------------------------------------------------------------
+   5. BUILDING PRODUCTS AT TECHNEST / SUMUNI (Cofounder)
+   -------------------------------------------------------------------------- */
+window.technestProducts = {
+  role: "Cofounder & Product Engineer",
+  summary: "As a cofounder at Technest/Sumuni, I work across product conceptualization, architecture, software development, and AI/agentic integration.",
+  lifecycle: [
+    { step: "01", name: "Idea & Requirements", desc: "Understanding real business requirements and defining product scope." },
+    { step: "02", name: "Product Design", desc: "User workflow mapping, database schema design, and API specification." },
+    { step: "03", name: "Engineering", desc: "Building mobile applications (Flutter), web interfaces (React), and backend APIs." },
+    { step: "04", name: "Deployment", desc: "Containerized deployment (Docker), database migration, and cloud/on-prem setup." },
+    { step: "05", name: "Iteration", desc: "Monitoring performance, gathering user feedback, and rolling out continuous updates." }
+  ],
+  products: [
     {
-      title: "Zayno — Technest Masterpiece",
-      category: "Technest Masterpiece / Enterprise Suite",
-      desc: "Technest's flagship product powering enterprise operations, workflow automation, and digital management.",
+      title: "Zayno — Technest Enterprise Platform",
       url: "https://zayno.io/",
+      category: "Enterprise Software Suite",
+      desc: "Technest's flagship product powering enterprise operations, workflow automation, and digital management.",
       tech: ["React", "Node.js", "PostgreSQL", "Docker", "Redis"],
       image: "./assets/images/project-6.png",
       subApps: ["Zayno Advisor App (Web)", "Zayno User App (Web/Mobile)", "Zayno Admin App (Web)"]
     },
     {
-      title: "Alateon",
-      category: "Church Content & Donation Platform",
-      desc: "Ethiopian Orthodox Tewahedo Church donation platform and spiritual content streaming application.",
-      tech: ["Flutter", "Node.js", "PostgreSQL", "Payment Integration"],
-      image: "./assets/images/project-3.jpg"
-    },
-    {
       title: "Project Sumuni",
-      category: "Entrepreneurship & Investment",
-      desc: "Sumuni's debut platform connecting African startups with global investors, due diligence tools, and business development.",
+      category: "Startup Ecosystem Platform",
+      desc: "Sumuni's debut platform connecting African startups with global investors, due diligence tools, and business development resources.",
       tech: ["React", "Laravel", "MySQL", "Flutter"],
       image: "./assets/images/sumuni.png"
     },
     {
-      title: "SMS Service Gateway",
-      category: "Telecom & Enterprise Communication",
-      desc: "High-throughput bulk SMS service gateway platform integrating telecom operators for transactional & promotional alerts.",
-      tech: ["Node.js", "Go", "Redis", "MySQL", "SMPP Protocol"],
-      image: "./assets/images/project-1.jpg"
+      title: "Alateon",
+      category: "Church Community Platform",
+      desc: "Mobile application for community donation and spiritual content streaming.",
+      tech: ["Flutter", "Node.js", "PostgreSQL"],
+      image: "./assets/images/project-3.jpg"
     },
     {
-      title: "Ethiopian Airport Parking System Suite",
-      category: "Smart Airport Infrastructure",
-      desc: "Complete smart airport parking gate control, revenue collection, and vehicle management ecosystem.",
-      tech: ["Flutter", "Web", "Node.js", "Hardware Integration"],
-    image: "./assets/images/usp.jpeg",
-      subApps: [
-        "Ethiopian Airport Parking System (Flutter)",
-        "Airport Parking Attendant App (Flutter)",
-        "Airport Parking Cashier App (Web)",
-        "Airport Parking Admin App (Web)",
-        "Penalty & Subscription QR Payment (Web)"
-      ]
-    },
-    {
-      title: "Addis Parking & Mobility Suite",
-      category: "Smart City Infrastructure",
-      desc: "Smart urban parking management platform with automated vehicle license plate recognition and slot booking.",
-      tech: ["Flutter", "Python / Vision", "React", "Node.js"],
-    image: "./assets/images/usp.jpeg",
-      subApps: [
-        "Attendant App (Flutter)",
-        "Parking Supervisor App (Flutter)",
-        "Addis Tow Truck App (Flutter)"
-      ]
-    },
-    {
-      title: "Atrip Rental & Mobility Suite",
-      category: "Vehicle Rental & Mobility",
-      desc: "Vehicle rental platform connecting car owners with drivers and rental customers.",
-      tech: ["Flutter", "React", "Laravel API", "PostgreSQL"],
-      image: "./assets/images/project-8.jpg",
-      subApps: [
-        "Atrip Rental Owner App (Flutter)",
-        "Atrip Rental Drivers App (Flutter)"
-      ]
-    },
-    {
-      title: "Custom Stock Management System",
-      category: "Enterprise SaaS",
-      desc: "All-in-one inventory tracking, sales recording, operational expense audit, and financial statement software.",
-      tech: ["Laravel", "Vue.js", "MySQL"],
-      image: "./assets/images/project-9.png"
+      title: "USP Airport & Addis Parking Suites",
+      category: "Smart Mobility Infrastructure",
+      desc: "Smart parking management systems deployed for airport facilities and urban municipal parking.",
+      tech: ["Flutter", "Python / Vision", "Node.js"],
+      image: "./assets/images/usp.jpeg"
     }
   ]
 };
 
 /* --------------------------------------------------------------------------
-   QEMER SOFTWARE TECHNOLOGIES PROJECTS
+   6. WHAT I ACTUALLY DO (Practical Capabilities)
    -------------------------------------------------------------------------- */
-window.qemerData = [
-  {
-    title: "Project Alen",
-    category: "Applications • Qemer",
-    desc: "Enterprise management and digital operational solution developed at Qemer Software Technologies.",
-    tech: ["Flutter", "Node.js", "MySQL"],
-    image: "./assets/images/qemer.jpeg"
-  },
-  {
-    title: "Project Heipeus",
-    category: "Applications • Qemer",
-    desc: "Custom digital service platform engineered for commercial client workflow automation.",
-    tech: ["React", "Laravel", "PostgreSQL"],
-    image: "./assets/images/qemer.jpeg"
-  },
-  {
-    title: "Project MallEt",
-    category: "Applications • Qemer",
-    desc: "E-commerce mall aggregation and vendor management portal for retail businesses.",
-    tech: ["Vue.js", "Node.js", "MongoDB"],
-    image: "./assets/images/qemer.jpeg"
-  }
-];
-
-/* --------------------------------------------------------------------------
-   FREELANCE PROJECTS
-   -------------------------------------------------------------------------- */
-window.freelanceData = [
-  {
-    title: "Superstar",
-    category: "Social Platform • Freelance",
-    desc: "Innovative LinkedIn & TikTok fusion app where tech professionals and creators post video content showcasing their skills and products.",
-    tech: ["Flutter", "Firebase", "Node.js", "Video Transcoding"],
-    image: "./assets/images/project-4.png"
-  },
-  {
-    title: "Food Fight",
-    category: "Mobile Application • Freelance",
-    desc: "Interactive culinary mobile application connecting food lovers, restaurants, and cooking challenges.",
-    tech: ["Flutter", "Dart", "REST API"],
-    image: "./assets/images/project-8.jpg"
-  }
-];
-
-/* --------------------------------------------------------------------------
-   AAU BSC PROJECTS
-   -------------------------------------------------------------------------- */
-window.aauBscData = [
-  {
-    title: "FixIt",
-    category: "Services Platform • AAU BSc",
-    desc: "On-demand maintenance and home repair technician booking platform built during BSc at AAU.",
-    tech: ["Java", "Android Native", "Firebase"],
-    image: "./assets/images/logo 1.png"
-  },
-  {
-    title: "Crime Investigation System",
-    category: "Security & Law Enforcement • AAU BSc",
-    desc: "Digital forensic investigation record management system for case tracking and evidence logs.",
-    tech: ["PHP", "MySQL", "JavaScript"],
-    image: "./assets/images/logo 1.png"
-  }
-];
-
-/* --------------------------------------------------------------------------
-   ALL SELECTED PROJECTS FOR FILTERABLE GRID
-   -------------------------------------------------------------------------- */
-window.projectsData = [
-  {
-    title: "Zayno — Technest Flagship",
-    category: "Web Applications",
-    desc: "Technest's masterpiece enterprise platform powering digital operations and SaaS management.",
-    url: "https://zayno.io/",
-    tech: ["React", "Node.js", "PostgreSQL", "Docker"],
-    image: "./assets/images/project-6.png",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Alateon",
-    category: "Mobile Applications",
-    desc: "Ethiopian Orthodox Tewahedo Church donation platform and spiritual content app.",
-    tech: ["Flutter", "Node.js", "PostgreSQL"],
-    image: "./assets/images/project-3.jpg",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Project Sumuni",
-    category: "Web Applications",
-    desc: "Sumuni's debut platform enabling business development, due diligence, and startup investor matchmaking.",
-    tech: ["React", "Laravel", "MySQL", "Flutter"],
-    image: "./assets/images/sumuni.png",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Technest SMS Service Gateway",
-    category: "Payment & Fintech",
-    desc: "High-volume transactional SMS gateway with telecom SMPP protocol integration.",
-    tech: ["Node.js", "Go", "Redis", "MySQL"],
-    image: "./assets/images/project-1.jpg",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Superstar Video Network",
-    category: "Mobile Applications",
-    desc: "LinkedIn + TikTok hybrid platform for professionals to share video content about themselves and products.",
-    tech: ["Flutter", "Firebase", "Node.js"],
-    image: "./assets/images/project-4.png",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Arifpay Product Chatbot",
-    category: "AI / ML",
-    desc: "Multilingual conversational AI agent assisting merchants and users with payment inquiries.",
-    tech: ["Python", "LangChain", "LLMs", "FastAPI"],
-    image: "./assets/images/project-1.jpg",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Multilingual Hate Speech Detection",
-    category: "AI / ML",
-    desc: "NLP classifier identifying toxic speech across Amharic, Afan Oromo, and English.",
-    tech: ["PyTorch", "Hugging Face", "spaCy"],
-    image: "./assets/images/ai.png",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Amharic Handwritten OCR Detection",
-    category: "Computer Vision",
-    desc: "Deep learning vision system extracting handwritten Amharic text from official forms.",
-    tech: ["OpenCV", "PyTorch", "CNNs"],
-    image: "./assets/images/project-9.png",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Movie & FM Recommendation (Arts TV)",
-    category: "AI / ML",
-    desc: "Personalized audio & video recommendation engine deployed on production streaming apps.",
-    tech: ["TensorFlow", "Python", "Flutter"],
-    image: "./assets/images/project-3.jpg",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Addis Parking Smart Vision",
-    category: "Computer Vision",
-    desc: "Automated license plate recognition and smart parking gate integration system.",
-    tech: ["YOLOv8", "OpenCV", "PyTorch", "React"],
-    image: "./assets/images/usp.jpeg",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "Project Alen (Qemer)",
-    category: "Web Applications",
-    desc: "Enterprise operational solution developed at Qemer Software Technologies.",
-    tech: ["Flutter", "Node.js", "MySQL"],
-    image: "./assets/images/qemer.jpeg",
-    github: "https://github.com/ashuChufamo"
-  },
-  {
-    title: "FixIt (AAU BSc)",
-    category: "Mobile Applications",
-    desc: "On-demand maintenance and home repair technician booking application.",
-    tech: ["Java", "Android Native", "Firebase"],
-    image: "./assets/images/logo 1.png",
-    github: "https://github.com/ashuChufamo"
-  }
-];
-
-window.techStackData = {
-  Languages: ["Python", "Dart", "JavaScript", "TypeScript", "Java", "Go", "C", "C#", "PHP"],
-  Frameworks: ["Flutter", "React", "Node.js", "Vue.js", "Laravel", "Django", "Spring Boot", "FastAPI"],
-  "AI / ML": ["PyTorch", "TensorFlow", "Hugging Face", "LangChain", "RAG", "LLMs", "Computer Vision (YOLO/OpenCV)", "Recommendation Systems", "Explainable AI (SHAP)", "Model Compression", "Knowledge Distillation"],
-  Data: ["PostgreSQL", "MySQL", "Apache Spark", "Hadoop", "Databricks", "Redis", "MongoDB", "Metabase"]
+window.whatIActuallyDo = {
+  build: [
+    { name: "Mobile Applications", desc: "Cross-platform mobile apps using Flutter for iOS and Android." },
+    { name: "Backend Systems & APIs", desc: "RESTful and GraphQL web services with Node.js, Python (FastAPI/Django), and Laravel." },
+    { name: "Web Applications", desc: "Responsive web platforms with React and modern JavaScript/TypeScript." },
+    { name: "Production Systems", desc: "Database architecture (PostgreSQL, MySQL), Redis caching, and Docker containerization." }
+  ],
+  intelligence: [
+    { name: "Machine Learning", desc: "Classification, regression, and explainable AI models (SHAP, scikit-learn, XGBoost)." },
+    { name: "Recommendation Systems", desc: "Collaborative filtering and content-based recommendation engines." },
+    { name: "Computer Vision", desc: "Object detection (YOLO) and OCR text extraction (OpenCV, PyTorch)." },
+    { name: "LLMs & AI Agents", desc: "Workflow automation agents, RAG implementations, and LangChain integration." }
+  ],
+  product: [
+    { name: "Product Development", desc: "Translating business goals into technical requirements and usable products." },
+    { name: "System Architecture", desc: "Designing robust data schemas, microservices, and component separation." },
+    { name: "Technical Leadership", desc: "Guiding engineering tasks, code reviews, and production deployments." }
+  ]
 };
 
-window.timelineData = [
+/* --------------------------------------------------------------------------
+   7. TECHNOLOGY STACK
+   -------------------------------------------------------------------------- */
+window.techStack = {
+  softwareEngineering: [
+    { name: "Flutter / Dart", level: "Advanced" },
+    { name: "Python", level: "Advanced" },
+    { name: "JavaScript / TypeScript", level: "Advanced" },
+    { name: "React", level: "Intermediate" },
+    { name: "Node.js / Express", level: "Advanced" },
+    { name: "Django / FastAPI", level: "Intermediate" },
+    { name: "Laravel", level: "Intermediate" }
+  ],
+  aiMl: [
+    { name: "Machine Learning", level: "Applied" },
+    { name: "Deep Learning (PyTorch)", level: "Applied" },
+    { name: "Computer Vision (YOLO/OpenCV)", level: "Applied" },
+    { name: "Recommendation Systems", level: "Applied" },
+    { name: "LLMs & LangChain", level: "Applied" },
+    { name: "RAG & AI Agents", level: "Exploring / Applied" },
+    { name: "SHAP Explainability", level: "Applied" }
+  ],
+  dataInfra: [
+    { name: "PostgreSQL / MySQL", level: "Advanced" },
+    { name: "Redis", level: "Intermediate" },
+    { name: "Docker", level: "Intermediate" },
+    { name: "Spark / Hadoop", level: "Foundational" },
+    { name: "Metabase BI", level: "Intermediate" }
+  ]
+};
+
+/* --------------------------------------------------------------------------
+   8. ACADEMIC RESEARCH (MSc Thesis)
+   -------------------------------------------------------------------------- */
+window.mscResearch = {
+  degree: "MSc in Artificial Intelligence",
+  institution: "Addis Ababa University",
+  thesisTitle: "Interpretable Knowledge Distillation with Mechanistic Attention Transfer for Efficient Model Compression",
+  summary: "My Master's research focused on compressing large neural networks into lightweight student models while transferring mechanistic attention maps to preserve interpretability and decision confidence.",
+  flow: [
+    { label: "Large Teacher Model", detail: "Heavy deep learning model with high accuracy but high computational cost." },
+    { label: "Knowledge Distillation", detail: "Transferring soft probability distributions from teacher to student." },
+    { label: "Attention Transfer", detail: "Aligning intermediate layer feature maps and mechanistic attention." },
+    { label: "Compact Student Model", detail: "Lightweight, interpretable model suitable for resource-constrained deployment." }
+  ]
+};
+
+/* --------------------------------------------------------------------------
+   9. CURRENTLY EXPLORING
+   -------------------------------------------------------------------------- */
+window.currentlyExploring = [
+  { topic: "Agentic AI", desc: "Multi-agent orchestration frameworks and automated tool execution." },
+  { topic: "LLM Applications & RAG", desc: "Retrieval-augmented generation pipelines for enterprise domain search." },
+  { topic: "AI Automation", desc: "Streamlining business workflows with intelligent API agents." },
+  { topic: "Production ML (MLOps)", desc: "Model monitoring, feature store integration, and automated retraining." },
+  { topic: "Efficient AI", desc: "Model quantization, pruning, and low-latency edge inference." }
+];
+
+/* --------------------------------------------------------------------------
+   10. TEACHING EXPERIENCE
+   -------------------------------------------------------------------------- */
+window.teachingExperience = {
+  role: "Laboratory Instructor",
+  institution: "Addis Ababa University",
+  period: "2023 — 2025 (4 Semesters)",
+  desc: "Conducted practical lab sessions and guided undergraduate students through hands-on programming exercises for 5–6 sessions per course semester.",
+  courses: [
+    "Data Structures & Algorithms (Lab)",
+    "Cognitive Science & AI Fundamentals (Lab)",
+    "Mathematics for AI & Machine Learning (Lab)"
+  ]
+};
+
+/* --------------------------------------------------------------------------
+   11. CAREER EXPERIENCE TIMELINE
+   -------------------------------------------------------------------------- */
+window.careerTimeline = [
   {
-    period: "Feb 2024 — Present",
-    role: "Tech Lead — ArifPay",
-    org: "ArifPay",
-    desc: "Directing AI chatbot, Amharic OCR, fraud detection, hate speech detection, recommenders, data warehouse, and central bank reporting.",
-    image: "./assets/images/project-2.png"
+    role: "Data Science Engineer",
+    company: "ArifPay",
+    period: "2024 — Present",
+    desc: "Working on fraud detection models, credit scoring algorithms, churn prediction, recommendation engines, and business analytics pipelines."
   },
   {
-    period: "May 2023 — Present",
-    role: "Cofounder & Tech Lead",
-    org: "Sumuni Creative Solutions / Technest",
-    desc: "Built Technest masterpiece Zayno (https://zayno.io/), Alateon church app, Project Sumuni, SMS Gateway, Airport Parking suite, and Mobility apps.",
-    image: "./assets/images/logo 7.png"
+    role: "Cofounder & Product Engineer",
+    company: "Technest / Sumuni Creative Solutions",
+    period: "2022 — Present",
+    desc: "Co-founding enterprise products, leading full-stack mobile/web engineering, and developing smart mobility systems."
   },
   {
-    period: "Feb 2024 — Present (4 Semesters / ~2 Years)",
-    role: "Lab Lecturer",
-    org: "Addis Ababa University",
-    desc: "Taught 4 semesters of Data Structures & Algorithms (DSA), Cognitive Science, and Mathematics for AI.",
-    image: "./assets/images/logo 1.png"
-  },
-  {
-    period: "Oct 2023 — Aug 2025",
-    role: "MSc. in Artificial Intelligence",
-    org: "Addis Ababa University",
-    desc: "Research focused on Mechanistic Attention Transfer & Interpretable Knowledge Distillation.",
-    image: "./assets/images/ai.png"
-  },
-  {
-    period: "July 2024 — Nov 2024",
-    role: "AGI Research Intern",
-    org: "iCog Labs",
-    desc: "Researched OpenCog and advanced artificial general intelligence architectures.",
-    image: "./assets/images/logo 5.png"
-  },
-  {
-    period: "2021 — 2022",
     role: "Software Engineer",
-    org: "Qemer Software Technologies",
-    desc: "Built Project Alen, Project Heipeus, and Project MallEt.",
-    image: "./assets/images/qemer.jpeg"
+    company: "Qemer Software Technologies",
+    period: "2021 — 2022",
+    desc: "Developed client web applications and mobile software solutions for regional enterprises."
   },
   {
-    period: "Aug 2022 — May 2023",
-    role: "ICT Intern",
-    org: "UNOPS",
-    desc: "Worked with Active Directory, Google Workspace, Windows Server, network infrastructure, and oneUNOPSCollect.",
-    image: "./assets/images/logo 2.png"
+    role: "Laboratory Instructor",
+    company: "Addis Ababa University",
+    period: "2023 — 2025",
+    desc: "Instructed laboratory sessions for Data Structures, Cognitive Science, and Mathematics for AI."
+  }
+];
+
+window.educationHistory = [
+  {
+    degree: "MSc in Artificial Intelligence",
+    institution: "Addis Ababa University",
+    period: "2022 — 2024",
+    desc: "Focus on Machine Learning, Deep Learning, Computer Vision, Model Compression, and Knowledge Distillation."
   },
   {
-    period: "Nov 2017 — Aug 2022",
-    role: "BSc. in Software Engineering (Great Distinction)",
-    org: "Addis Ababa University",
-    desc: "Graduated with top honors. Built FixIt and Crime Investigation System.",
-    image: "./assets/images/logo 1.png"
+    degree: "BSc in Computer Science",
+    institution: "Addis Ababa University",
+    period: "2018 — 2022",
+    desc: "Strong core foundation in Software Engineering, Algorithms, Database Systems, and Network Architecture."
   }
 ];

@@ -1,6 +1,7 @@
 /**
- * 10-Second Intro Video Controller
- * Handles video modal, autoplay, sound toggling, skipping, and visit persistence.
+ * 10-Second Signature Intro Video Controller
+ * Plays intro video for first-time session visitors with skip capability,
+ * reduced-motion compliance, and replay trigger.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,15 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!introModal || !videoPlayer) return;
 
-  const HAS_SEEN_KEY = "ashu_portfolio_intro_seen";
+  const HAS_SEEN_KEY = "ashu_portfolio_intro_seen_v2";
   const hasSeenInSession = sessionStorage.getItem(HAS_SEEN_KEY);
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function startIntroVideo() {
     introModal.classList.remove("hidden");
     introModal.classList.add("active");
     videoPlayer.muted = true;
-    
-    // Update sound button UI
+
     if (soundBtn) {
       soundBtn.innerHTML = `<span class="icon">🔇</span> Unmute`;
     }
@@ -34,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         })
         .catch((err) => {
-          console.warn("Autoplay muted video was prevented or interrupted:", err);
+          console.warn("Intro video playback notice:", err);
+          // If browser blocks playback, allow manual close or skip
         });
     }
   }
@@ -44,10 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       introModal.classList.add("hidden");
       videoPlayer.pause();
-    }, 500);
+    }, 400);
 
     sessionStorage.setItem(HAS_SEEN_KEY, "true");
-    localStorage.setItem("ashu_last_video_play", new Date().toISOString());
 
     if (window.portfolioAnalytics) {
       window.portfolioAnalytics.trackEvent("video_complete");
@@ -73,12 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // When video ends naturally
+  // Video Ended event
   videoPlayer.addEventListener("ended", () => {
     closeIntroVideo();
   });
 
-  // Replay from Hero section
+  // Video Error fallback
+  videoPlayer.addEventListener("error", () => {
+    closeIntroVideo();
+  });
+
+  // Replay from Hero button
   if (heroReplayBtn) {
     heroReplayBtn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -87,12 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Check if first visit in session
-  if (!hasSeenInSession) {
-    // Small delay for initial render polish
+  // First visit in session check (skip if prefers reduced motion)
+  if (!hasSeenInSession && !prefersReducedMotion) {
     setTimeout(() => {
       startIntroVideo();
-    }, 400);
+    }, 300);
   } else {
     introModal.classList.add("hidden");
   }

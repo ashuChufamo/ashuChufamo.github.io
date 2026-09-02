@@ -3,623 +3,419 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashenafi Chufamo — AI Software Engineer, Tech Lead, Researcher & Cofounder</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Portfolio of Ashenafi Chufamo: AI Software Engineer, Tech Lead at ArifPay, Researcher, Lab Lecturer at AAU, and Cofounder at Sumuni (Technest). Creator of Zayno (https://zayno.io/)." />
-  <meta name="keywords" content="Ashenafi Chufamo, AI Engineer, Software Engineer, Tech Lead, ArifPay, Sumuni, Technest, Zayno, https://zayno.io/, Addis Ababa University, Lab Lecturer, Knowledge Distillation" />
+  <title>Ashenafi Chufamo | Senior Software Engineer & AI/ML Engineer</title>
+  <meta name="description" content="Senior Software Engineer building toward AI/ML. Combining software engineering experience with a Master's background in Artificial Intelligence." />
   <meta name="author" content="Ashenafi Chufamo" />
-  <link rel="canonical" href="https://ashuchufamo.github.io/" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ashuchufamo.github.io/" />
-  <meta property="og:title" content="Ashenafi Chufamo — AI Software Engineer & Tech Lead" />
-  <meta property="og:description" content="Architecting Intelligent Systems, Payment Gateways, Zayno (https://zayno.io/), AI Agents, and Scalable Products from Concept to Production." />
-  <meta property="og:image" content="./assets/images/ashu.jpg" />
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ashenafi Chufamo — AI Software Engineer & Tech Lead" />
-  <meta name="twitter:description" content="Architecting Intelligent Systems & Scalable Products from Concept to Production." />
-  <meta name="twitter:image" content="./assets/images/ashu.jpg" />
-
-  <!-- Favicon & Styles -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Animation & Particle Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js" defer></script>
-
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ashenafi Chufamo",
-    "jobTitle": "AI Software Engineer & Tech Lead",
-    "worksFor": [
-      { "@type": "Organization", "name": "ArifPay" },
-      { "@type": "Organization", "name": "Sumuni Creative Solutions / Technest" }
-    ],
-    "alumniOf": "Addis Ababa University",
-    "url": "https://ashuchufamo.github.io/",
-    "sameAs": [
-      "https://github.com/ashuChufamo",
-      "https://et.linkedin.com/in/ashenafi-chufamo-bab330185"
-    ]
-  }
-  </script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress" id="scroll-progress-bar"></div>
-
-  <!-- tsParticles Background -->
   <div id="particles-js"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
 
-  <!-- 10-Second Intro Video Modal -->
-  <div class="video-modal-overlay hidden" id="video-intro-modal">
-    <div class="video-container-box">
-      <video id="intro-video-player" playsinline muted poster="./assets/images/ashu.jpg">
-        <source src="./assets/videos/This_is_me_i_am_a_senior_AI_S.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="video-controls-overlay">
-        <button class="btn-pill" id="toggle-sound-btn">
-          <span class="icon">🔇</span> Unmute
-        </button>
-        <button class="btn-pill" id="skip-intro-btn">
-          Skip Intro <span class="icon">✕</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navbar -->
+  <!-- ------------------------------------------------------------------------
+       1. Navigation Header
+       ------------------------------------------------------------------------ -->
   <header class="navbar-header">
-    <a href="#home" class="brand-logo">
-      <img src="./assets/images/ashu.jpg" alt="Ashenafi Chufamo" />
+    <a href="#" class="brand-logo">
+      <img src="./assets/images/usp.jpeg" alt="Ashenafi Chufamo" />
       <span>Ashenafi Chufamo</span>
     </a>
 
     <nav class="nav-menu" id="nav-menu">
-      <a href="#home" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#ai-systems" class="nav-link">AI Systems</a>
-      <a href="#arifpay" class="nav-link">ArifPay</a>
-      <a href="#sumuni" class="nav-link">Sumuni / Technest</a>
-      <a href="#other-work" class="nav-link">Qemer & Freelance</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#tech-stack" class="nav-link">Tech Stack</a>
+      <a href="#career-transition" class="nav-link">Transition</a>
+      <a href="#software-built" class="nav-link">Software Built</a>
+      <a href="#arifpay-ai" class="nav-link">Applied AI</a>
+      <a href="#technest-products" class="nav-link">Technest</a>
+      <a href="#what-i-do" class="nav-link">Capabilities</a>
       <a href="#research" class="nav-link">Research</a>
-      <a href="#timeline" class="nav-link">Timeline</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
     <div class="nav-controls">
-      <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme">
-        <span id="theme-toggle-icon">🌙</span>
-      </button>
-      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
-        ☰
-      </button>
+      <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Light/Dark Theme">☀️</button>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
     </div>
   </header>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="pulse-dot"></span>
-            Tech Lead • AI Engineer • Founder • AAU Lecturer
-          </div>
-
-          <h1 class="hero-title">
-            I Build <span class="gradient-text">Intelligent Systems</span> That Solve Real-World Problems.
-          </h1>
-
-          <div class="hero-roles">
-            AI-Software Engineer • Tech Lead • Researcher • Cofounder
-          </div>
-
-          <p class="hero-desc">
-            Architecting high-scale payment platforms (ArifPay), Technest masterpieces (<a href="https://zayno.io/" target="_blank" rel="noopener" style="color: var(--accent-cyan); text-decoration: underline;">Zayno</a>, Sumuni First App, SMS Gateway), autonomous AI agents, and enterprise products. Taking technology from <strong>Concept → Architecture → Production</strong>.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn-primary">View My Work</a>
-            <a href="#ai-systems" class="btn-secondary">Explore AI Work</a>
-            <button class="btn-secondary" id="hero-replay-video-btn">▶ Play Intro Video</button>
-            <a href="#contact" class="btn-secondary">Contact Me</a>
-          </div>
-
-          <div class="social-links-bar">
-            <a href="https://github.com/ashuChufamo" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-            <a href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-            <a href="mailto:chufamoashenafi@gmail.com" class="social-icon-btn" title="Email">
-              <ion-icon name="mail-outline"></ion-icon>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-visual-card">
-          <canvas id="ai-network-canvas"></canvas>
-          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">
-            Interactive Skill Intersection Node Visualizer
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS COUNTER SECTION -->
-    <section class="stats-section" id="stats">
-      <div class="container">
-        <div class="stats-grid glass-card">
-          <div class="stat-card">
-            <div class="stat-number" data-target="35">0</div>
-            <div class="stat-label">Projects Built</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="20">0</div>
-            <div class="stat-label">Production Systems</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="12">0</div>
-            <div class="stat-label">AI & ML Systems</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="5">0</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="25">0</div>
-            <div class="stat-label">Tech & Frameworks</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="30">0</div>
-            <div class="stat-label">Businesses Served</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Engineering Philosophy & Teaching</span>
-          <h2 class="section-title">Architecting Systems & Mentoring Talent</h2>
-        </div>
-
-        <div class="glass-card" style="margin-bottom: 40px;">
-          <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-            <img src="./assets/images/logo 1.png" alt="Addis Ababa University" style="width: 60px; height: 60px; object-fit: contain;" />
-            <div>
-              <h3 style="font-size: 1.5rem; font-family: var(--font-heading); color: var(--accent-cyan);">Lab Lecturer — Addis Ababa University</h3>
-              <p style="color: var(--text-muted);">4 Semesters (~2 Years) • Computer Science & AI Department</p>
-            </div>
-          </div>
-
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 20px;">
-            Beyond industry software leadership, I serve as a <strong>Lab Lecturer at Addis Ababa University</strong>. Over the past 4 semesters (~2 years), I have taught core courses including <strong>Data Structures & Algorithms (DSA)</strong> for 2nd-year Software Engineering students, <strong>Cognitive Science</strong> for 5th-year AI undergraduates, and <strong>Mathematics for Artificial Intelligence</strong>.
-          </p>
-
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 30px; text-align: center;">
-            <div class="arch-node-card" style="flex: 1; min-width: 140px;">
-              <div class="arch-node-title">1. Idea</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted);">Problem definition & strategic vision</p>
-            </div>
-            <div class="arch-arrow">→</div>
-            <div class="arch-node-card" style="flex: 1; min-width: 140px;">
-              <div class="arch-node-title">2. Architecture</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted);">Scalable system & data pipeline design</p>
-            </div>
-            <div class="arch-arrow">→</div>
-            <div class="arch-node-card" style="flex: 1; min-width: 140px;">
-              <div class="arch-node-title">3. Development</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted);">Robust full-stack & ML implementation</p>
-            </div>
-            <div class="arch-arrow">→</div>
-            <div class="arch-node-card" style="flex: 1; min-width: 140px;">
-              <div class="arch-node-title">4. Deployment</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted);">CI/CD, containerization & cloud setup</p>
-            </div>
-            <div class="arch-arrow">→</div>
-            <div class="arch-node-card" style="flex: 1; min-width: 140px;">
-              <div class="arch-node-title">5. Production</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted);">Real-time monitoring & continuous optimization</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="ai-systems-grid">
-          <div class="glass-card">
-            <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Fintech & Payments</h3>
-            <p style="font-size: 0.92rem; color: var(--text-secondary);">ArifPay chatbot, Amharic OCR, SoftPOS apps, fraud detection, recommenders, and Central Bank reporting engines.</p>
-          </div>
-          <div class="glass-card">
-            <h3 style="color: var(--accent-emerald); margin-bottom: 10px;">AI & Machine Learning</h3>
-            <p style="font-size: 0.92rem; color: var(--text-secondary);">Agentic marketing engines, production credit scoring, hate speech classifiers, and mechanistic attention distillation research.</p>
-          </div>
-          <div class="glass-card">
-            <h3 style="color: var(--accent-purple); margin-bottom: 10px;">Technest Enterprise Products</h3>
-            <p style="font-size: 0.92rem; color: var(--text-secondary);">Zayno (<a href="https://zayno.io/" target="_blank" rel="noopener" style="color: var(--accent-cyan);">zayno.io</a>), Alateon church app, Sumuni app, SMS Gateway, USP Airport system, and Addis Parking suite.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AI SYSTEMS SECTION -->
-    <section class="ai-systems-section" id="ai-systems">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Intelligent Solutions</span>
-          <h2 class="section-title">AI Systems I've Built</h2>
-        </div>
-
-        <div class="filter-tab-bar" id="ai-filter-bar">
-          <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="AI Agents">AI Agents</button>
-          <button class="filter-tab" data-filter="Machine Learning">Machine Learning</button>
-          <button class="filter-tab" data-filter="Computer Vision">Computer Vision</button>
-          <button class="filter-tab" data-filter="Analytics">Analytics</button>
-          <button class="filter-tab" data-filter="Recommendation">Recommendation</button>
-        </div>
-
-        <div class="ai-systems-grid" id="ai-systems-grid">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ARIFPAY SECTION -->
-    <section class="arifpay-section" id="arifpay">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Leadership & Payment Technology</span>
-          <h2 class="section-title">Building Technology at ArifPay</h2>
-        </div>
-
-        <div class="glass-card" style="margin-bottom: 40px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-            <div>
-              <h3 style="font-size: 1.8rem; font-family: var(--font-heading);" class="gradient-text">Tech Lead — ArifPay</h3>
-              <p style="color: var(--text-muted);">2024 — Present • Financial Technology & Payment Ecosystem</p>
-            </div>
-            <div class="tech-tag" style="font-size: 0.85rem;">Payment Gateway & AI Automation</div>
-          </div>
-
-          <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 24px;">
-            Directing engineering, AI integration, merchant intelligence, data pipelines, regulatory compliance reporting, and production infrastructure for payment systems in Ethiopia.
-          </p>
-
-          <h4 style="color: var(--accent-cyan); margin-bottom: 16px;">System Architecture Flow</h4>
-
-          <div class="arifpay-architecture-flow">
-            <div class="arch-node-card">
-              <div class="arch-node-title">AI / Data Layer</div>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Transaction Ingestion & Feature Store</p>
-            </div>
-            <div class="arch-arrow">↓</div>
-            <div class="arch-node-card">
-              <div class="arch-node-title">Intelligence</div>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Fraud Detection & Credit Scoring</p>
-            </div>
-            <div class="arch-arrow">↓</div>
-            <div class="arch-node-card">
-              <div class="arch-node-title">Products</div>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Chatbots, SoftPOS & SDKs</p>
-            </div>
-            <div class="arch-arrow">↓</div>
-            <div class="arch-node-card">
-              <div class="arch-node-title">Business</div>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Central Bank Regulatory Engine</p>
-            </div>
-            <div class="arch-arrow">↓</div>
-            <div class="arch-node-card">
-              <div class="arch-node-title">Customers</div>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Active Merchants & Users</p>
-            </div>
-          </div>
-        </div>
-
-        <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--text-primary); margin-bottom: 20px;">
-          Products & AI Systems Built at ArifPay (12 Projects)
-        </h3>
-
-        <div class="ai-systems-grid" id="arifpay-products-grid">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SUMUNI / TECHNEST SECTION -->
-    <section class="sumuni-section" id="sumuni">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Venture & Product Ecosystem</span>
-          <h2 class="section-title">Building Products at Sumuni / Technest</h2>
-        </div>
-
-        <div class="glass-card" style="margin-bottom: 40px;">
-          <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 14px;">
-            <img src="./assets/images/logo 7.png" alt="Sumuni Technest" style="width: 50px; height: 50px; object-fit: contain;" />
-            <div>
-              <h3 style="font-size: 1.6rem; font-family: var(--font-heading); color: var(--accent-cyan);">
-                Cofounder & Tech Lead — Sumuni / Technest
-              </h3>
-              <p style="color: var(--text-muted);">Flagship SaaS, Smart Infrastructure & Enterprise Products</p>
-            </div>
-          </div>
-
-          <p style="color: var(--text-secondary); font-size: 1.05rem;">
-            Co-founded Sumuni Creative Solutions / Technest. Led end-to-end development of Technest's masterpiece platform <strong><a href="https://zayno.io/" target="_blank" rel="noopener" style="color: var(--accent-cyan); text-decoration: underline;">Zayno (zayno.io)</a></strong>, <strong>Alateon</strong> (Ethiopian Orthodox church donation & content app), Sumuni debut app, Technest SMS Gateway, Ethiopian Airport Parking System suite, Addis Parking mobility apps, Atrip Rental, and Stock Management.
-          </p>
-        </div>
-
-        <div class="ai-systems-grid" id="sumuni-projects-grid">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- QEMER, FREELANCE & BSC PROJECTS SECTION -->
-    <section class="other-work-section" id="other-work">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Career Portfolio</span>
-          <h2 class="section-title">Qemer Tech, Freelance & AAU BSc Projects</h2>
-        </div>
-
-        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--accent-emerald); margin-bottom: 16px;">
-          Qemer Software Technologies Projects
-        </h3>
-        <div class="ai-systems-grid" style="margin-bottom: 40px;" id="qemer-projects-grid">
-          <!-- Populated dynamically via JS -->
-        </div>
-
-        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--accent-purple); margin-bottom: 16px;">
-          Freelance Engineering Projects (Superstar & Food Fight)
-        </h3>
-        <div class="ai-systems-grid" style="margin-bottom: 40px;" id="freelance-projects-grid">
-          <!-- Populated dynamically via JS -->
-        </div>
-
-        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--accent-amber); margin-bottom: 16px;">
-          Addis Ababa University BSc Projects
-        </h3>
-        <div class="ai-systems-grid" id="aau-bsc-projects-grid">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECT SHOWCASE SECTION -->
-    <section class="projects-section" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Portfolio Showcase</span>
-          <h2 class="section-title">Selected Work</h2>
-        </div>
-
-        <div class="filter-tab-bar" id="project-filter-bar">
-          <button class="filter-tab active" data-pfilter="all">All</button>
-          <button class="filter-tab" data-pfilter="AI / ML">AI / ML</button>
-          <button class="filter-tab" data-pfilter="Mobile Applications">Mobile Apps</button>
-          <button class="filter-tab" data-pfilter="Web Applications">Web Apps</button>
-          <button class="filter-tab" data-pfilter="Payment & Fintech">Fintech</button>
-          <button class="filter-tab" data-pfilter="Computer Vision">Computer Vision</button>
-          <button class="filter-tab" data-pfilter="Research">Research</button>
-        </div>
-
-        <div class="ai-systems-grid" id="selected-projects-grid">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- TECHNOLOGY STACK SECTION -->
-    <section class="tech-stack-section" id="tech-stack">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Capabilities</span>
-          <h2 class="section-title">Technology Stack</h2>
-        </div>
-
-        <div class="glass-card" id="tech-stack-container">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEARCH SECTION -->
-    <section class="research-section" id="research">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Academic & Applied Research</span>
-          <h2 class="section-title">MSc. Research Spotlight</h2>
-        </div>
-
-        <div class="glass-card" style="border-left: 4px solid var(--accent-cyan);">
-          <div class="tag-list" style="margin-bottom: 12px;">
-            <span class="tech-tag">MSc Artificial Intelligence</span>
-            <span class="tech-tag">Addis Ababa University</span>
-          </div>
-
-          <h3 style="font-size: 1.6rem; font-family: var(--font-heading); margin-bottom: 16px;" class="gradient-text">
-            Interpretable Knowledge Distillation with Mechanistic Attention Transfer for Efficient Model Compression
-          </h3>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 24px;">
-            <div>
-              <h4 style="color: var(--accent-cyan); margin-bottom: 8px;">The Research Problem</h4>
-              <p style="font-size: 0.92rem; color: var(--text-secondary);">
-                Deep learning models are increasingly effective but remain parameter-heavy 'black boxes' requiring immense compute resources. Standard model compression dilutes feature interpretability.
-              </p>
-            </div>
-            <div>
-              <h4 style="color: var(--accent-emerald); margin-bottom: 8px;">The Mechanistic Solution</h4>
-              <p style="font-size: 0.92rem; color: var(--text-secondary);">
-                By enforcing mechanistic attention map alignment during teacher-student distillation, compact student networks retain both high execution speed and verified feature interpretability.
-              </p>
-            </div>
-          </div>
-
-          <h4 style="color: var(--text-primary); margin-bottom: 16px;">Visual Compression & Alignment Pipeline</h4>
-
-          <div class="research-pipeline-grid">
-            <div class="pipeline-step-card">
-              <div class="pipeline-num">01. Teacher</div>
-              <p style="font-size: 0.85rem; font-weight: 600;">Heavy Model</p>
-            </div>
-            <div class="pipeline-step-card">
-              <div class="pipeline-num">02. Extract</div>
-              <p style="font-size: 0.85rem; font-weight: 600;">Attention Maps</p>
-            </div>
-            <div class="pipeline-step-card">
-              <div class="pipeline-num">03. Transfer</div>
-              <p style="font-size: 0.85rem; font-weight: 600;">Mechanistic Alignment</p>
-            </div>
-            <div class="pipeline-step-card">
-              <div class="pipeline-num">04. Distill</div>
-              <p style="font-size: 0.85rem; font-weight: 600;">Student Model</p>
-            </div>
-            <div class="pipeline-step-card">
-              <div class="pipeline-num">05. Deploy</div>
-              <p style="font-size: 0.85rem; font-weight: 600;">Efficient & Interpretable</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CAREER TIMELINE SECTION -->
-    <section class="timeline-section" id="timeline">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Journey</span>
-          <h2 class="section-title">Career & Academic Timeline</h2>
-        </div>
-
-        <div class="glass-card" id="timeline-container">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Get In Touch</span>
-          <h2 class="section-title">Let's Build Something Intelligent.</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="glass-card">
-            <h3 style="font-size: 1.5rem; font-family: var(--font-heading); margin-bottom: 16px; color: var(--accent-cyan);">
-              Open for High-Impact Initiatives
-            </h3>
-            <p style="color: var(--text-secondary); margin-bottom: 24px;">
-              Whether you are looking for technical leadership, AI engineering architecture, startup advisory, or research collaboration—let's connect.
-            </p>
-
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-              <div>
-                <strong style="color: var(--text-primary); display: block;">Email:</strong>
-                <a href="mailto:chufamoashenafi@gmail.com">chufamoashenafi@gmail.com</a>
-              </div>
-              <div>
-                <strong style="color: var(--text-primary); display: block;">Phone:</strong>
-                <a href="tel:+251944060864">+251 (944) 060-864</a>
-              </div>
-              <div>
-                <strong style="color: var(--text-primary); display: block;">Location:</strong>
-                <span style="color: var(--text-secondary);">Addis Ababa, Ethiopia</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass-card">
-            <form id="contact-form">
-              <div class="form-group">
-                <input type="text" name="fullname" class="form-input" placeholder="Your Name" required />
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" class="form-input" placeholder="Your Email Address" required />
-              </div>
-              <div class="form-group">
-                <textarea name="message" class="form-input" placeholder="Your Message or Project Vision..." required></textarea>
-              </div>
-              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
-                Send Message <ion-icon name="paper-plane-outline"></ion-icon>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- DEVELOPER ANALYTICS WIDGET -->
-  <div class="analytics-widget" id="analytics-widget">
-    <div class="widget-header">
-      <div class="widget-title">
-        <span>⚡</span> PORTFOLIO INTELLIGENCE
-      </div>
-      <button class="widget-toggle-btn" id="toggle-analytics-widget" title="Toggle Widget">−</button>
-    </div>
-    <div class="widget-body" id="analytics-widget-body">
-      <div class="widget-row">
-        <span>Views:</span>
-        <span class="widget-val" id="widget-views-count">1,284</span>
-      </div>
-      <div class="widget-row">
-        <span>Visitors:</span>
-        <span class="widget-val" id="widget-visitors-count">816</span>
-      </div>
-      <div class="widget-row">
-        <span>Video Plays:</span>
-        <span class="widget-val" id="widget-plays-count">742</span>
-      </div>
-      <div class="widget-row" style="margin-top: 8px; font-size: 0.72rem; color: var(--text-muted);">
-        <span>Last Activity:</span>
-        <span id="widget-last-activity" style="color: var(--text-secondary);">Just now</span>
+  <!-- ------------------------------------------------------------------------
+       2. 10-Second Signature Intro Video Modal
+       ------------------------------------------------------------------------ -->
+  <div class="video-modal-overlay hidden" id="video-intro-modal">
+    <div class="video-container-box">
+      <video id="intro-video-player" src="./assets/videos/This_is_me_i_am_a_senior_AI_S.mp4" playsinline muted preload="auto"></video>
+      <div class="video-controls-overlay">
+        <button class="btn-pill" id="toggle-sound-btn"><span class="icon">🔇</span> Unmute</button>
+        <button class="btn-pill" id="skip-intro-btn">Skip Intro ✕</button>
       </div>
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- ------------------------------------------------------------------------
+       3. Hero Section
+       ------------------------------------------------------------------------ -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Senior Software Engineer → AI/ML
+        </div>
+        <h1 class="hero-title" id="hero-name">Ashenafi Chufamo</h1>
+        <div class="hero-roles gradient-text" id="hero-headline">
+          Senior Software Engineer building toward AI/ML.
+        </div>
+        <p class="hero-desc" id="hero-bio">
+          I build production software and applied AI systems, combining years of software engineering experience with my background in Artificial Intelligence.
+        </p>
+
+        <div class="hero-tags-row">
+          <span class="hero-tag">Software Engineering</span>
+          <span class="hero-tag">Applied AI/ML</span>
+          <span class="hero-tag">Product Development</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#software-built" class="btn-primary">View My Work →</a>
+          <a href="#about" class="btn-secondary">About Me</a>
+          <button class="btn-secondary" id="hero-replay-video-btn" style="padding: 12px 18px;">🎬 Watch Intro Video</button>
+        </div>
+
+        <div class="social-links-bar">
+          <a href="https://github.com/ashuChufamo" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub">🐙</a>
+          <a href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn">💼</a>
+          <a href="mailto:chufamoashenafi@gmail.com" class="social-icon-btn" title="Email">✉️</a>
+        </div>
+      </div>
+
+      <div class="hero-visual-card">
+        <canvas id="ai-network-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       4. About Me Section
+       ------------------------------------------------------------------------ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Background & Mindset</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="glass-card" style="max-width: 900px; margin: 0 auto; line-height: 1.75; font-size: 1.02rem;">
+        <p style="margin-bottom: 16px; color: var(--text-secondary);">
+          I am a software engineer with several years of experience building applications and production systems. After completing my Master's degree in Artificial Intelligence at Addis Ababa University, I began moving deeper into AI and machine learning through practical work on production systems at ArifPay as a Data Science Engineer. Alongside that work, I continue building software products and AI/agentic systems as a cofounder at Technest/Sumuni.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); justify-content: center; text-align: center;">
+          <div style="flex: 1; min-width: 200px;">
+            <div style="font-weight: 700; color: var(--accent-cyan);">Software Engineering</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">The Foundation</div>
+          </div>
+          <div style="font-weight: 700; color: var(--accent-blue);">+</div>
+          <div style="flex: 1; min-width: 200px;">
+            <div style="font-weight: 700; color: var(--accent-emerald);">AI / Machine Learning</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">The Specialization</div>
+          </div>
+          <div style="font-weight: 700; color: var(--accent-blue);">+</div>
+          <div style="flex: 1; min-width: 200px;">
+            <div style="font-weight: 700; color: var(--accent-purple);">Product Development</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">The Execution</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       5. "From Software Engineering to AI" Transition Timeline
+       ------------------------------------------------------------------------ -->
+  <section id="career-transition" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Career Progression</span>
+        <h2 class="section-title">From Software Engineering to AI</h2>
+      </div>
+
+      <div class="transition-timeline-wrapper">
+        <div class="transition-timeline-flow" id="transition-timeline-flow">
+          <!-- Populated dynamically via script.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       6. Software I've Built (Software Engineering Showcase)
+       ------------------------------------------------------------------------ -->
+  <section id="software-built">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Engineering Foundation</span>
+        <h2 class="section-title">Software I've Built</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="software-built-grid">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       7. Applied AI at ArifPay (Data Science Engineer)
+       ------------------------------------------------------------------------ -->
+  <section id="arifpay-ai" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Data Science Engineer • ArifPay</span>
+        <h2 class="section-title">Applied AI at ArifPay</h2>
+      </div>
+
+      <p style="text-align: center; max-width: 750px; margin: -20px auto 40px; color: var(--text-secondary); font-size: 0.95rem;">
+        Worked on practical machine learning models, predictive algorithms, reporting pipelines, and agentic intelligence to support financial services and payment infrastructure in Ethiopia.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="arifpay-ai-grid">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       8. Interactive Applied AI Case Studies
+       ------------------------------------------------------------------------ -->
+  <section id="applied-ai">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Systems & Implementation</span>
+        <h2 class="section-title">Applied AI Case Studies</h2>
+      </div>
+
+      <p style="text-align: center; max-width: 700px; margin: -20px auto 40px; color: var(--text-secondary); font-size: 0.95rem;">
+        Real-world AI systems I've worked on, detailing problem statements, system approach, and my personal engineering contributions.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="applied-ai-case-studies-grid">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       9. Building Products at Technest / Sumuni (Cofounder)
+       ------------------------------------------------------------------------ -->
+  <section id="technest-products" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Cofounder & Product Engineer</span>
+        <h2 class="section-title">Building Products at Technest</h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;" id="technest-lifecycle-flow">
+        <!-- Lifecycle steps populated dynamically -->
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="technest-products-grid">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       10. "What I Actually Do" Section
+       ------------------------------------------------------------------------ -->
+  <section id="what-i-do">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Practical Capabilities</span>
+        <h2 class="section-title">What I Actually Do</h2>
+      </div>
+
+      <div class="what-i-do-grid" id="what-i-actually-do-grid">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       11. Technology Stack
+       ------------------------------------------------------------------------ -->
+  <section id="tech-stack" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Pragmatic Tooling</span>
+        <h2 class="section-title">Technology Stack</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;" id="tech-stack-grid">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       12. Academic Research & Thesis
+       ------------------------------------------------------------------------ -->
+  <section id="research">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">MSc Artificial Intelligence • Addis Ababa University</span>
+        <h2 class="section-title">Research</h2>
+      </div>
+
+      <div class="glass-card" style="max-width: 900px; margin: 0 auto;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 10px;">
+          Interpretable Knowledge Distillation with Mechanistic Attention Transfer for Efficient Model Compression
+        </h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px;">
+          My Master's research focused on compressing deep neural networks into efficient student models while transferring mechanistic attention maps to preserve model interpretability and decision confidence.
+        </p>
+
+        <div class="thesis-flow-container" id="msc-research-flow">
+          <!-- Flow diagram steps populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       13. Currently Exploring & Laboratory Instructor
+       ------------------------------------------------------------------------ -->
+  <section id="exploring" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start;">
+        <div>
+          <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+            <span class="section-subtitle">Active Growth</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Currently Exploring</h2>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr; gap: 14px;" id="currently-exploring-grid">
+            <!-- Populated dynamically via script.js -->
+          </div>
+        </div>
+
+        <div>
+          <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+            <span class="section-subtitle">Academic Contribution</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Teaching</h2>
+          </div>
+          <div id="teaching-lab-box">
+            <!-- Populated dynamically via script.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       14. Experience & Education Timeline
+       ------------------------------------------------------------------------ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">History & Qualifications</span>
+        <h2 class="section-title">Experience & Education</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 20px;">Work History</h3>
+          <div id="career-history-timeline"></div>
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--accent-emerald); margin-bottom: 20px;">Education</h3>
+          <div id="education-history-timeline"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       15. Contact Section
+       ------------------------------------------------------------------------ -->
+  <section id="contact" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="glass-card" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 40px 30px;">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title" style="margin-bottom: 14px;">Let's Build Something.</h2>
+        <p style="font-size: 1.02rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 28px;">
+          Interested in software engineering, applied AI, product development, or building something from scratch? I'd be happy to connect.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 24px;">
+          <a href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185" target="_blank" rel="noopener" class="btn-primary">Connect on LinkedIn 💼</a>
+          <a href="https://github.com/ashuChufamo" target="_blank" rel="noopener" class="btn-secondary">GitHub Profile 🐙</a>
+          <a href="mailto:chufamoashenafi@gmail.com" class="btn-secondary">Send Email ✉️</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------------
+       16. Footer
+       ------------------------------------------------------------------------ -->
   <footer>
     <div class="container">
-      <p>© 2026 Ashenafi Chufamo. Designed & Engineered for High Performance.</p>
+      <p style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">Ashenafi Chufamo</p>
+      <p style="font-size: 0.82rem; color: var(--accent-cyan); margin-bottom: 12px;">Senior Software Engineer → AI/ML</p>
+      <p>© <span id="copyright-year">2026</span> Ashenafi Chufamo. Built with engineering discipline.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="./assets/js/portfolio-data.js"></script>
-  <script src="./assets/js/analytics.js"></script>
-  <script src="./assets/js/ai-graph.js"></script>
-  <script src="./assets/js/video-intro.js"></script>
-  <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/animation.js"></script>
+  <!-- ------------------------------------------------------------------------
+       17. Developer Activity Widget (Persistent Server Sync)
+       ------------------------------------------------------------------------ -->
+  <div class="analytics-widget" id="analytics-widget">
+    <div class="widget-header">
+      <div class="widget-title">
+        <span>⚡ PORTFOLIO INTELLIGENCE</span>
+      </div>
+      <button class="widget-toggle-btn" id="toggle-analytics-widget">−</button>
+    </div>
+    <div class="widget-body" id="analytics-widget-body">
+      <div class="widget-row">
+        <span>Views:</span>
+        <span class="widget-val" id="widget-views-count">342</span>
+      </div>
+      <div class="widget-row">
+        <span>Visitors:</span>
+        <span class="widget-val" id="widget-visitors-count">198</span>
+      </div>
+      <div class="widget-row">
+        <span>Video Plays:</span>
+        <span class="widget-val" id="widget-plays-count">145</span>
+      </div>
+      <div class="widget-row">
+        <span>Last Activity:</span>
+        <span class="widget-val" id="widget-last-activity">Just now</span>
+      </div>
+    </div>
+  </div>
 
-  <!-- Ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- ------------------------------------------------------------------------
+       18. Case Study Details Modal
+       ------------------------------------------------------------------------ -->
+  <div class="case-study-modal-overlay hidden" id="case-study-modal">
+    <div class="case-study-modal-container">
+      <button class="case-study-close-btn" id="close-case-study-btn" title="Close Case Study">✕</button>
+      <div id="case-study-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/portfolio-data.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/ai-graph.js"></script>
+  <script src="assets/js/video-intro.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

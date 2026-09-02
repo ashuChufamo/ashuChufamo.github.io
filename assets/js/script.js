@@ -1,423 +1,518 @@
 /**
- * Main Interactive Logic & Dynamic Content Renderer (Updated)
- * Reads structured data from window.* and handles UI rendering across all project suites.
+ * Dynamic Content Renderer & UI Logic — Ashenafi Chufamo Portfolio
+ * Narrative: Senior Software Engineer → AI/ML Engineer
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initMobileMenu();
   initScrollProgress();
-  renderAISystems();
-  renderArifPayProducts();
-  renderSumuniProjects();
-  renderQemerProjects();
-  renderFreelanceProjects();
-  renderAAUBScProjects();
-  renderSelectedProjects();
+  initSmoothScroll();
+
+  // Render narrative sections
+  renderPersonalHeader();
+  renderCareerTransition();
+  renderSoftwareBuilt();
+  renderArifPayAI();
+  renderAppliedAICaseStudies();
+  renderTechnestProducts();
+  renderWhatIActuallyDo();
   renderTechStack();
-  renderTimeline();
-  initContactForm();
+  renderMScResearch();
+  renderCurrentlyExploring();
+  renderTeachingExperience();
+  renderCareerTimeline();
+
+  // Setup modal handlers
+  initCaseStudyModal();
 });
 
 /* --------------------------------------------------------------------------
-   1. Theme Switcher (Dark / Light Mode)
+   1. Personal Header & Hero Info
    -------------------------------------------------------------------------- */
-function initThemeToggle() {
-  const toggleBtn = document.getElementById("theme-toggle-btn");
-  const toggleIcon = document.getElementById("theme-toggle-icon");
-  const currentTheme = localStorage.getItem("ashu_theme") || "dark";
+function renderPersonalHeader() {
+  const p = window.personalInfo;
+  if (!p) return;
 
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  if (toggleIcon) toggleIcon.textContent = currentTheme === "dark" ? "🌙" : "☀️";
+  const heroTitle = document.getElementById("hero-name");
+  const heroRoles = document.getElementById("hero-headline");
+  const heroDesc = document.getElementById("hero-bio");
+  const copyrightYear = document.getElementById("copyright-year");
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      const activeTheme = document.documentElement.getAttribute("data-theme");
-      const newTheme = activeTheme === "dark" ? "light" : "dark";
-
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("ashu_theme", newTheme);
-      if (toggleIcon) toggleIcon.textContent = newTheme === "dark" ? "🌙" : "☀️";
-    });
-  }
+  if (heroTitle) heroTitle.textContent = p.name;
+  if (heroRoles) heroRoles.textContent = p.headline;
+  if (heroDesc) heroDesc.textContent = p.bio;
+  if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
 }
 
 /* --------------------------------------------------------------------------
-   2. Mobile Navigation Drawer
+   2. Career Transition Timeline ("From Software Engineering to AI")
    -------------------------------------------------------------------------- */
-function initMobileMenu() {
-  const toggleBtn = document.getElementById("mobile-menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-  const navLinks = document.querySelectorAll(".nav-link");
+function renderCareerTransition() {
+  const container = document.getElementById("transition-timeline-flow");
+  const list = window.careerTransition;
+  if (!container || !list) return;
 
-  if (toggleBtn && navMenu) {
-    toggleBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-      });
-    });
-  }
+  container.innerHTML = list.map(item => `
+    <div class="timeline-step-card">
+      <span class="timeline-step-num">STEP ${item.step}</span>
+      <h3 class="timeline-step-phase">${item.phase}</h3>
+      <p class="timeline-step-desc">${item.desc}</p>
+    </div>
+  `).join("");
 }
 
 /* --------------------------------------------------------------------------
-   3. Scroll Progress Indicator
+   3. Software Engineering Showcase ("Software I've Built")
    -------------------------------------------------------------------------- */
-function initScrollProgress() {
-  const progressBar = document.getElementById("scroll-progress-bar");
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (scrollTop / docHeight) * 100;
-    if (progressBar) progressBar.style.width = `${progress}%`;
-  });
-}
+function renderSoftwareBuilt() {
+  const container = document.getElementById("software-built-grid");
+  const list = window.softwareBuilt;
+  if (!container || !list) return;
 
-/* --------------------------------------------------------------------------
-   4. Render AI Systems & Category Filtering
-   -------------------------------------------------------------------------- */
-function renderAISystems() {
-  const grid = document.getElementById("ai-systems-grid");
-  const filterTabs = document.querySelectorAll("#ai-filter-bar .filter-tab");
-  if (!grid || !window.aiSystemsData) return;
-
-  function displayItems(filter = "all") {
-    grid.innerHTML = "";
-    const filtered = filter === "all"
-      ? window.aiSystemsData
-      : window.aiSystemsData.filter((item) => item.category.toLowerCase().includes(filter.toLowerCase()));
-
-    filtered.forEach((item) => {
-      const card = document.createElement("div");
-      card.className = "glass-card ai-card";
-      card.innerHTML = `
-        <div>
-          ${item.image ? `<img src="${item.image}" alt="${item.title}" class="card-img-thumb" onerror="this.src='./assets/images/project-1.jpg'" />` : ''}
-          <div class="ai-card-category">${item.category}</div>
-          <h3 class="ai-card-title">${item.title}</h3>
-          <div class="ai-card-body">
-            <p><strong>Problem:</strong> ${item.problem}</p>
-            <p style="margin-top: 6px;"><strong>Solution:</strong> ${item.solution}</p>
-          </div>
-        </div>
-        <div>
-          <div class="ai-impact-box">💡 <strong>Impact:</strong> ${item.impact}</div>
-          <div class="tag-list">
-            ${item.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-          </div>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
-  }
-
-  displayItems("all");
-
-  filterTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      filterTabs.forEach((t) => t.classList.remove("active"));
-      tab.classList.add("active");
-      displayItems(tab.getAttribute("data-filter"));
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   5. Render ArifPay 12-Project Suite
-   -------------------------------------------------------------------------- */
-function renderArifPayProducts() {
-  const grid = document.getElementById("arifpay-products-grid");
-  if (!grid || !window.arifPayData || !window.arifPayData.products) return;
-
-  grid.innerHTML = window.arifPayData.products
-    .map(
-      (p) => `
-      <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <img src="${p.image}" alt="${p.title}" class="card-img-thumb" onerror="this.src='./assets/images/project-2.png'" />
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 4px;">
-            ${p.category}
-          </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 8px; color: var(--text-primary);">
-            ${p.title}
-          </h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">
-            ${p.desc}
-          </p>
-        </div>
-        <div class="tag-list">
-          ${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-        </div>
+  container.innerHTML = list.map(item => `
+    <div class="glass-card">
+      ${item.image ? `<img src="${item.image}" alt="${item.title}" class="card-img-thumb" loading="lazy" />` : ''}
+      <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--accent-cyan); letter-spacing: 1px; margin-bottom: 4px;">
+        ${item.category}
       </div>
-    `
-    )
-    .join("");
-}
-
-/* --------------------------------------------------------------------------
-   6. Render Sumuni / Technest Projects (Zayno with link, Alateon, Airport Parking)
-   -------------------------------------------------------------------------- */
-function renderSumuniProjects() {
-  const grid = document.getElementById("sumuni-projects-grid");
-  if (!grid || !window.sumuniData || !window.sumuniData.projects) return;
-
-  grid.innerHTML = window.sumuniData.projects
-    .map(
-      (p) => `
-      <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <img src="${p.image}" alt="${p.title}" class="card-img-thumb" onerror="this.src='./assets/images/project-6.png'" />
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 6px;">
-            ${p.category}
-          </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 8px; color: var(--text-primary);">
-            ${p.title} ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" style="font-size: 0.85rem; margin-left: 6px;">🔗 zayno.io ↗</a>` : ''}
-          </h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 14px;">
-            ${p.desc}
-          </p>
-          ${
-            p.subApps
-              ? `
-            <div style="background: rgba(0, 242, 254, 0.05); border: 1px solid var(--border-glow); padding: 10px 14px; border-radius: var(--radius-sm); margin-bottom: 14px;">
-              <strong style="font-size: 0.8rem; color: var(--accent-cyan); display: block; margin-bottom: 4px;">Suite Applications:</strong>
-              <ul style="font-size: 0.8rem; color: var(--text-secondary); padding-left: 14px; list-style-type: disc;">
-                ${p.subApps.map((sa) => `<li>${sa}</li>`).join("")}
-              </ul>
-            </div>
-          `
-              : ""
-          }
+      <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+        ${item.title}
+      </h3>
+      <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;">
+        ${item.desc}
+      </p>
+      ${item.role ? `<div style="font-size: 0.82rem; font-weight: 600; color: var(--accent-emerald); margin-bottom: 10px;">Role: ${item.role}</div>` : ''}
+      ${item.subApps ? `
+        <div style="margin-bottom: 12px; background: rgba(0, 242, 254, 0.04); border-left: 2px solid var(--accent-cyan); padding: 6px 10px; border-radius: 0 4px 4px 0;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 4px;">Suite Applications:</div>
+          <ul style="font-size: 0.8rem; color: var(--text-secondary); padding-left: 12px; list-style: disc;">
+            ${item.subApps.map(app => `<li>${app}</li>`).join("")}
+          </ul>
         </div>
-        <div class="tag-list">
-          ${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-        </div>
+      ` : ''}
+      <div class="tag-list">
+        ${item.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
       </div>
-    `
-    )
-    .join("");
+    </div>
+  `).join("");
 }
 
 /* --------------------------------------------------------------------------
-   7. Render Qemer Projects
+   4. Applied AI at ArifPay (Data Science Engineer)
    -------------------------------------------------------------------------- */
-function renderQemerProjects() {
-  const grid = document.getElementById("qemer-projects-grid");
-  if (!grid || !window.qemerData) return;
+function renderArifPayAI() {
+  const container = document.getElementById("arifpay-ai-grid");
+  const data = window.arifPayAI;
+  if (!container || !data) return;
 
-  grid.innerHTML = window.qemerData
-    .map(
-      (p) => `
-      <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <img src="${p.image}" alt="${p.title}" class="card-img-thumb" onerror="this.src='./assets/images/qemer.jpeg'" />
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-emerald); text-transform: uppercase; margin-bottom: 6px;">
-            ${p.category}
-          </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 8px;">${p.title}</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">${p.desc}</p>
-        </div>
-        <div class="tag-list">
-          ${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-        </div>
+  container.innerHTML = data.projects.map(item => `
+    <div class="glass-card">
+      ${item.image ? `<img src="${item.image}" alt="${item.title}" class="card-img-thumb" loading="lazy" />` : ''}
+      <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--accent-emerald); letter-spacing: 1px; margin-bottom: 4px;">
+        ${item.category}
       </div>
-    `
-    )
-    .join("");
-}
-
-/* --------------------------------------------------------------------------
-   8. Render Freelance Projects (Superstar & Food Fight)
-   -------------------------------------------------------------------------- */
-function renderFreelanceProjects() {
-  const grid = document.getElementById("freelance-projects-grid");
-  if (!grid || !window.freelanceData) return;
-
-  grid.innerHTML = window.freelanceData
-    .map(
-      (p) => `
-      <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <img src="${p.image}" alt="${p.title}" class="card-img-thumb" onerror="this.src='./assets/images/project-4.png'" />
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-purple); text-transform: uppercase; margin-bottom: 6px;">
-            ${p.category}
-          </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 8px;">${p.title}</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">${p.desc}</p>
-        </div>
-        <div class="tag-list">
-          ${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-        </div>
+      <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+        ${item.title}
+      </h3>
+      <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;">
+        ${item.desc}
+      </p>
+      <div class="tag-list">
+        ${item.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
       </div>
-    `
-    )
-    .join("");
+    </div>
+  `).join("");
 }
 
 /* --------------------------------------------------------------------------
-   9. Render AAU BSc Projects (FixIt & Crime Investigation)
+   5. Interactive Applied AI Case Studies
    -------------------------------------------------------------------------- */
-function renderAAUBScProjects() {
-  const grid = document.getElementById("aau-bsc-projects-grid");
-  if (!grid || !window.aauBscData) return;
+function renderAppliedAICaseStudies() {
+  const container = document.getElementById("applied-ai-case-studies-grid");
+  const list = window.appliedAICaseStudies;
+  if (!container || !list) return;
 
-  grid.innerHTML = window.aauBscData
-    .map(
-      (p) => `
-      <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <img src="${p.image}" alt="${p.title}" class="card-img-thumb" onerror="this.src='./assets/images/logo 1.png'" />
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-amber); text-transform: uppercase; margin-bottom: 6px;">
-            ${p.category}
-          </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 8px;">${p.title}</h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">${p.desc}</p>
+  container.innerHTML = list.map(item => `
+    <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--accent-purple); letter-spacing: 1px; margin-bottom: 4px;">
+          ${item.category}
         </div>
-        <div class="tag-list">
-          ${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-        </div>
-      </div>
-    `
-    )
-    .join("");
-}
-
-/* --------------------------------------------------------------------------
-   10. Render Selected Work Showcase & Filtering
-   -------------------------------------------------------------------------- */
-function renderSelectedProjects() {
-  const grid = document.getElementById("selected-projects-grid");
-  const filterTabs = document.querySelectorAll("#project-filter-bar .filter-tab");
-  if (!grid || !window.projectsData) return;
-
-  function displayProjects(filter = "all") {
-    grid.innerHTML = "";
-    const filtered = filter === "all"
-      ? window.projectsData
-      : window.projectsData.filter((item) => item.category.toLowerCase().includes(filter.toLowerCase()));
-
-    filtered.forEach((p) => {
-      const card = document.createElement("div");
-      card.className = "glass-card";
-      card.style.display = "flex";
-      card.style.flexDirection = "column";
-      card.style.justifyContent = "space-between";
-      card.innerHTML = `
-        <div>
-          <img src="${p.image}" alt="${p.title}" class="card-img-thumb" onerror="this.src='./assets/images/project-1.jpg'" />
-          <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-emerald); text-transform: uppercase; margin-bottom: 6px;">
-            ${p.category}
-          </div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 8px;">
-            ${p.title} ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" style="font-size: 0.8rem; margin-left: 6px;">↗ zayno.io</a>` : ''}
-          </h3>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">${p.desc}</p>
-        </div>
-        <div>
-          <div class="tag-list" style="margin-bottom: 16px;">
-            ${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
-          </div>
-          <div style="display: flex; gap: 10px;">
-            <a href="${p.github}" target="_blank" rel="noopener" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;">
-              GitHub ↗
-            </a>
-          </div>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
-  }
-
-  displayProjects("all");
-
-  filterTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      filterTabs.forEach((t) => t.classList.remove("active"));
-      tab.classList.add("active");
-      displayProjects(tab.getAttribute("data-pfilter"));
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   11. Render Tech Stack
-   -------------------------------------------------------------------------- */
-function renderTechStack() {
-  const container = document.getElementById("tech-stack-container");
-  if (!container || !window.techStackData) return;
-
-  container.innerHTML = Object.entries(window.techStackData)
-    .map(
-      ([category, items]) => `
-      <div style="margin-bottom: 24px;">
-        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--accent-cyan); margin-bottom: 12px;">
-          ${category}
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+          ${item.title}
         </h3>
-        <div class="tag-list">
-          ${items.map((item) => `<span class="tech-tag" style="font-size: 0.82rem; padding: 6px 14px;">${item}</span>`).join("")}
-        </div>
-      </div>
-    `
-    )
-    .join("");
-}
-
-/* --------------------------------------------------------------------------
-   12. Render Timeline
-   -------------------------------------------------------------------------- */
-function renderTimeline() {
-  const container = document.getElementById("timeline-container");
-  if (!container || !window.timelineData) return;
-
-  container.innerHTML = window.timelineData
-    .map(
-      (item) => `
-      <div style="position: relative; padding-left: 28px; margin-bottom: 30px; border-left: 2px solid var(--border-glow);">
-        <div style="position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan);"></div>
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px;">
-          <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-cyan); font-family: var(--font-mono);">
-            ${item.period}
-          </div>
-          ${item.image ? `<img src="${item.image}" alt="${item.org}" style="width: 32px; height: 32px; object-fit: contain; border-radius: 4px;" />` : ''}
-        </div>
-        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 4px;">
-          ${item.role}
-        </h3>
-        <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px;">
-          ${item.org}
-        </div>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">
-          ${item.desc}
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 14px;">
+          ${item.summary}
         </p>
       </div>
-    `
-    )
-    .join("");
+      <div>
+        <div class="tag-list" style="margin-bottom: 16px;">
+          ${item.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
+        </div>
+        <button class="btn-secondary open-case-study-btn" data-id="${item.id}" style="width: 100%; justify-content: center; padding: 8px 14px; font-size: 0.84rem;">
+          View Case Study Details →
+        </button>
+      </div>
+    </div>
+  `).join("");
+
+  // Attach event listeners to buttons
+  const buttons = container.querySelectorAll(".open-case-study-btn");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const csId = btn.getAttribute("data-id");
+      openCaseStudyModal(csId);
+    });
+  });
+}
+
+function openCaseStudyModal(id) {
+  const modal = document.getElementById("case-study-modal");
+  const content = document.getElementById("case-study-modal-body");
+  const list = window.appliedAICaseStudies;
+  if (!modal || !content || !list) return;
+
+  const item = list.find(cs => cs.id === id);
+  if (!item) return;
+
+  content.innerHTML = `
+    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--accent-cyan); letter-spacing: 1px; margin-bottom: 4px;">
+      ${item.category} • Case Study
+    </div>
+    <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--text-primary); margin-bottom: 20px;">
+      ${item.title}
+    </h2>
+
+    <div class="cs-block">
+      <span class="cs-block-label">Problem</span>
+      <p class="cs-block-text">${item.problem}</p>
+    </div>
+
+    <div class="cs-block">
+      <span class="cs-block-label">Approach</span>
+      <p class="cs-block-text">${item.approach}</p>
+    </div>
+
+    <div class="cs-block">
+      <span class="cs-block-label">My Contribution</span>
+      <p class="cs-block-text">${item.contribution}</p>
+    </div>
+
+    <div class="cs-block">
+      <span class="cs-block-label">Technologies Used</span>
+      <div class="tag-list">
+        ${item.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
+      </div>
+    </div>
+  `;
+
+  modal.classList.remove("hidden");
+  modal.classList.add("active");
+}
+
+function initCaseStudyModal() {
+  const modal = document.getElementById("case-study-modal");
+  const closeBtn = document.getElementById("close-case-study-btn");
+  if (!modal) return;
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+      setTimeout(() => modal.classList.add("hidden"), 300);
+    });
+  }
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      setTimeout(() => modal.classList.add("hidden"), 300);
+    }
+  });
 }
 
 /* --------------------------------------------------------------------------
-   13. Contact Form Handling
+   6. Building Products at Technest / Sumuni (Cofounder)
    -------------------------------------------------------------------------- */
-function initContactForm() {
-  const form = document.getElementById("contact-form");
-  if (!form) return;
+function renderTechnestProducts() {
+  const lifecycleContainer = document.getElementById("technest-lifecycle-flow");
+  const productsContainer = document.getElementById("technest-products-grid");
+  const data = window.technestProducts;
+  if (!data) return;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const btn = form.querySelector("button[type='submit']");
-    if (btn) {
-      btn.textContent = "Message Sent ✓";
-      btn.style.background = "var(--accent-emerald)";
-      btn.style.color = "#fff";
-      setTimeout(() => {
-        form.reset();
-        btn.innerHTML = `Send Message <ion-icon name="paper-plane-outline"></ion-icon>`;
-        btn.style.background = "";
-        btn.style.color = "";
-      }, 3000);
-    }
+  if (lifecycleContainer && data.lifecycle) {
+    lifecycleContainer.innerHTML = data.lifecycle.map(step => `
+      <div style="flex: 1; min-width: 150px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 12px; text-align: center;">
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 4px;">STAGE ${step.step}</div>
+        <div style="font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 4px;">${step.name}</div>
+        <div style="font-size: 0.8rem; color: var(--text-secondary);">${step.desc}</div>
+      </div>
+    `).join("");
+  }
+
+  if (productsContainer && data.products) {
+    productsContainer.innerHTML = data.products.map(item => `
+      <div class="glass-card">
+        ${item.image ? `<img src="${item.image}" alt="${item.title}" class="card-img-thumb" loading="lazy" />` : ''}
+        <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--accent-amber); letter-spacing: 1px; margin-bottom: 4px;">
+          ${item.category}
+        </div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+          ${item.title}
+          ${item.url ? ` <a href="${item.url}" target="_blank" rel="noopener" style="font-size: 0.82rem; color: var(--accent-cyan); text-decoration: underline;">[zayno.io]</a>` : ''}
+        </h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;">
+          ${item.desc}
+        </p>
+        <div class="tag-list">
+          ${item.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
+        </div>
+      </div>
+    `).join("");
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. "What I Actually Do" Section
+   -------------------------------------------------------------------------- */
+function renderWhatIActuallyDo() {
+  const container = document.getElementById("what-i-actually-do-grid");
+  const data = window.whatIActuallyDo;
+  if (!container || !data) return;
+
+  container.innerHTML = `
+    <div class="what-i-do-card">
+      <h3 class="what-i-do-title">⚡ BUILD</h3>
+      ${data.build.map(item => `
+        <div class="capability-list-item">
+          <div class="capability-item-name">${item.name}</div>
+          <div class="capability-item-desc">${item.desc}</div>
+        </div>
+      `).join("")}
+    </div>
+
+    <div class="what-i-do-card">
+      <h3 class="what-i-do-title" style="color: var(--accent-emerald);">🧠 INTELLIGENCE</h3>
+      ${data.intelligence.map(item => `
+        <div class="capability-list-item">
+          <div class="capability-item-name">${item.name}</div>
+          <div class="capability-item-desc">${item.desc}</div>
+        </div>
+      `).join("")}
+    </div>
+
+    <div class="what-i-do-card">
+      <h3 class="what-i-do-title" style="color: var(--accent-purple);">🚀 PRODUCT</h3>
+      ${data.product.map(item => `
+        <div class="capability-list-item">
+          <div class="capability-item-name">${item.name}</div>
+          <div class="capability-item-desc">${item.desc}</div>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+/* --------------------------------------------------------------------------
+   8. Technology Stack
+   -------------------------------------------------------------------------- */
+function renderTechStack() {
+  const container = document.getElementById("tech-stack-grid");
+  const data = window.techStack;
+  if (!container || !data) return;
+
+  container.innerHTML = `
+    <div class="glass-card">
+      <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--accent-cyan); margin-bottom: 14px;">Software Engineering</h3>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        ${data.softwareEngineering.map(t => `
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem; border-bottom: 1px dashed var(--border-color); padding-bottom: 4px;">
+            <span style="color: var(--text-primary); font-weight: 500;">${t.name}</span>
+            <span style="color: var(--accent-cyan); font-size: 0.78rem; font-weight: 600;">${t.level}</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--accent-emerald); margin-bottom: 14px;">AI / Machine Learning</h3>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        ${data.aiMl.map(t => `
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem; border-bottom: 1px dashed var(--border-color); padding-bottom: 4px;">
+            <span style="color: var(--text-primary); font-weight: 500;">${t.name}</span>
+            <span style="color: var(--accent-emerald); font-size: 0.78rem; font-weight: 600;">${t.level}</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--accent-amber); margin-bottom: 14px;">Data & Infrastructure</h3>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        ${data.dataInfra.map(t => `
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem; border-bottom: 1px dashed var(--border-color); padding-bottom: 4px;">
+            <span style="color: var(--text-primary); font-weight: 500;">${t.name}</span>
+            <span style="color: var(--accent-amber); font-size: 0.78rem; font-weight: 600;">${t.level}</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+/* --------------------------------------------------------------------------
+   9. MSc Research Thesis Distillation Flow
+   -------------------------------------------------------------------------- */
+function renderMScResearch() {
+  const container = document.getElementById("msc-research-flow");
+  const data = window.mscResearch;
+  if (!container || !data) return;
+
+  container.innerHTML = data.flow.map((step, idx) => `
+    <div class="thesis-flow-step">
+      <div class="thesis-flow-label">${step.label}</div>
+      <div class="thesis-flow-detail">${step.detail}</div>
+    </div>
+    ${idx < data.flow.length - 1 ? '<div class="thesis-arrow">→</div>' : ''}
+  `).join("");
+}
+
+/* --------------------------------------------------------------------------
+   10. Currently Exploring
+   -------------------------------------------------------------------------- */
+function renderCurrentlyExploring() {
+  const container = document.getElementById("currently-exploring-grid");
+  const list = window.currentlyExploring;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="glass-card" style="padding: 18px 16px;">
+      <h4 style="color: var(--accent-cyan); font-size: 1rem; margin-bottom: 6px;">${item.topic}</h4>
+      <p style="font-size: 0.84rem; color: var(--text-secondary);">${item.desc}</p>
+    </div>
+  `).join("");
+}
+
+/* --------------------------------------------------------------------------
+   11. Laboratory Instructor Teaching Experience
+   -------------------------------------------------------------------------- */
+function renderTeachingExperience() {
+  const container = document.getElementById("teaching-lab-box");
+  const data = window.teachingExperience;
+  if (!container || !data) return;
+
+  container.innerHTML = `
+    <div class="glass-card" style="border-left: 3px solid var(--accent-cyan);">
+      <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--accent-cyan); letter-spacing: 1px; margin-bottom: 4px;">
+        ${data.role} • ${data.institution} (${data.period})
+      </div>
+      <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;">
+        ${data.desc}
+      </p>
+      <div style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Lab Course Component Instructed:</div>
+      <ul style="font-size: 0.84rem; color: var(--text-secondary); padding-left: 16px; list-style: disc;">
+        ${data.courses.map(c => `<li>${c}</li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+/* --------------------------------------------------------------------------
+   12. Career Timeline & Education
+   -------------------------------------------------------------------------- */
+function renderCareerTimeline() {
+  const timelineContainer = document.getElementById("career-history-timeline");
+  const eduContainer = document.getElementById("education-history-timeline");
+  const expList = window.careerTimeline;
+  const eduList = window.educationHistory;
+
+  if (timelineContainer && expList) {
+    timelineContainer.innerHTML = expList.map(item => `
+      <div style="position: relative; padding-left: 24px; border-left: 2px solid var(--border-color); margin-bottom: 24px;">
+        <div style="position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-cyan);"></div>
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-cyan);">${item.period}</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin: 2px 0;">${item.role}</h4>
+        <div style="font-size: 0.88rem; font-weight: 600; color: var(--accent-emerald); margin-bottom: 6px;">${item.company}</div>
+        <p style="font-size: 0.86rem; color: var(--text-secondary);">${item.desc}</p>
+      </div>
+    `).join("");
+  }
+
+  if (eduContainer && eduList) {
+    eduContainer.innerHTML = eduList.map(item => `
+      <div style="position: relative; padding-left: 24px; border-left: 2px solid var(--border-color); margin-bottom: 24px;">
+        <div style="position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-emerald);"></div>
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-emerald);">${item.period}</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin: 2px 0;">${item.degree}</h4>
+        <div style="font-size: 0.88rem; font-weight: 600; color: var(--accent-cyan); margin-bottom: 6px;">${item.institution}</div>
+        <p style="font-size: 0.86rem; color: var(--text-secondary);">${item.desc}</p>
+      </div>
+    `).join("");
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. UI Navigation Controls (Theme, Mobile Menu, Scroll)
+   -------------------------------------------------------------------------- */
+function initThemeToggle() {
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+
+  const currentTheme = localStorage.getItem("theme") || "dark";
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  updateThemeIcon(btn, currentTheme);
+
+  btn.addEventListener("click", () => {
+    const activeTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = activeTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    updateThemeIcon(btn, newTheme);
+  });
+}
+
+function updateThemeIcon(btn, theme) {
+  btn.textContent = theme === "dark" ? "☀️" : "🌙";
+}
+
+function initMobileMenu() {
+  const toggle = document.getElementById("mobile-menu-toggle");
+  const menu = document.getElementById("nav-menu");
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  const links = menu.querySelectorAll(".nav-link");
+  links.forEach(l => {
+    l.addEventListener("click", () => menu.classList.remove("active"));
+  });
+}
+
+function initScrollProgress() {
+  const bar = document.getElementById("scroll-progress");
+  if (!bar) return;
+
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    bar.style.width = scrolled + "%";
+  });
+}
+
+function initSmoothScroll() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   });
 }

@@ -1,119 +1,163 @@
-/**
- * Scroll Animations & Particle Background Configuration
- * Powered by GSAP ScrollTrigger and tsParticles.
- */
+// -----------------------------------------------------
+// Particles
+// -----------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
-  initParticles();
-  initGSAPAnimations();
+tsParticles.load("particles-js", {
+  fpsLimit: 60,
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: "#ffc700"
+    },
+    shape: {
+      type: "circle"
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab"
+      },
+      onclick: {
+        enable: true,
+        mode: "push"
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  },
+  retina_detect: true,
+  background: {
+    color: "#1e1e1e",
+    image: "",
+    position: "50% 50%",
+    repeat: "no-repeat",
+    size: "cover"
+  }
 });
 
-function initParticles() {
-  if (typeof tsParticles !== "undefined") {
-    tsParticles.load("particles-js", {
-      fpsLimit: 60,
-      particles: {
-        number: {
-          value: 50,
-          density: { enable: true, value_area: 800 }
-        },
-        color: { value: ["#00f2fe", "#4facfe", "#38ef7d"] },
-        shape: { type: "circle" },
-        opacity: { value: 0.35, random: true },
-        size: { value: 2.5, random: true },
-        line_linked: {
-          enable: true,
-          distance: 140,
-          color: "#ffffff",
-          opacity: 0.15,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 1.5,
-          direction: "none",
-          out_mode: "out"
-        }
-      },
-      interactivity: {
-        events: {
-          onhover: { enable: true, mode: "grab" },
-          onclick: { enable: true, mode: "push" },
-          resize: true
-        },
-        modes: {
-          grab: { distance: 160, line_linked: { opacity: 0.4 } },
-          push: { particles_nb: 3 }
-        }
-      },
-      retina_detect: true
-    }).catch((err) => {
-      console.warn("tsParticles initialization skipped or failed:", err);
-    });
-  }
-}
+// -----------------------------------------------------
+// Animations
+// -----------------------------------------------------
 
-function initGSAPAnimations() {
-  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-
+document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Hero section entrance
-  gsap.from(".hero-content", {
-    y: 40,
+  // Animate the sidebar
+  gsap.from(".sidebar", {
+    x: -200,
     opacity: 0,
     duration: 1,
     ease: "power3.out"
   });
 
-  gsap.from(".hero-visual-card", {
-    scale: 0.9,
+  // Animate the main content
+  gsap.from(".main-content", {
+    x: 200,
     opacity: 0,
-    duration: 1.2,
-    delay: 0.2,
+    duration: 1,
     ease: "power3.out"
   });
 
-  // Animated Count-Up Stats
-  const statNumbers = document.querySelectorAll(".stat-number");
-  statNumbers.forEach((stat) => {
-    const target = parseInt(stat.getAttribute("data-target"), 10) || 0;
-    
-    ScrollTrigger.create({
-      trigger: stat,
-      start: "top 85%",
-      onEnter: () => {
-        gsap.to(stat, {
-          innerText: target,
-          duration: 2,
-          snap: { innerText: 1 },
-          ease: "power2.out",
-          onUpdate: function () {
-            stat.textContent = Math.floor(stat.innerText) + "+";
-          }
-        });
-      },
-      once: true
-    });
+  // Animate the service items
+  gsap.from(".service-item", {
+    scrollTrigger: {
+      trigger: ".service-list",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none"
+    },
+    y: 50,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power3.out"
   });
 
-  // Generic card scroll fade-in
-  const animateCards = (selector) => {
-    const elements = document.querySelectorAll(selector);
-    elements.forEach((el) => {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 88%",
-          toggleActions: "play none none none"
-        },
-        y: 35,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out"
-      });
-    });
-  };
-
-  animateCards(".glass-card");
-}
+  // Animate the testimonials
+  gsap.from(".testimonials-item", {
+    scrollTrigger: {
+      trigger: ".testimonials-list",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none"
+    },
+    y: 50,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power3.out"
+  });
+});

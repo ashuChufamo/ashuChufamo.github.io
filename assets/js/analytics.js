@@ -23,7 +23,6 @@
       const isNewSession = !sessionStorage.getItem("ashu_session_active");
       sessionStorage.setItem("ashu_session_active", "true");
 
-      // 1. Load local cache first for instant UI response
       const cached = this.loadCache();
       if (cached) {
         this.views = Math.max(BASELINE_VIEWS, cached.views || BASELINE_VIEWS);
@@ -32,9 +31,7 @@
       }
       this.updateWidget();
 
-      // 2. Global Cross-Browser Server Sync via CountAPI
       try {
-        // Hit global view counter
         const viewRes = await fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/views`);
         if (viewRes.ok) {
           const viewData = await viewRes.json();
@@ -43,7 +40,6 @@
           }
         }
 
-        // Sync visitors counter
         if (isNewSession) {
           const visRes = await fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/visitors`);
           if (visRes.ok) {
@@ -62,7 +58,6 @@
           }
         }
 
-        // Get video plays count
         const playRes = await fetch(`https://api.countapi.xyz/get/${NAMESPACE}/plays`);
         if (playRes.ok) {
           const playData = await playRes.json();
@@ -71,7 +66,6 @@
           }
         }
       } catch (err) {
-        // Offline / Fallback: increment locally
         if (isNewSession) {
           this.views += 1;
           this.visitors += 1;
