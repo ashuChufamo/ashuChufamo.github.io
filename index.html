@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashenafi Chufamo | Senior Software Engineer & AI/ML Engineer</title>
-  <meta name="description" content="Senior Software Engineer building toward AI/ML. Combining software engineering experience with a Master's background in Artificial Intelligence." />
+  <title>Ashenafi Chufamo | Senior Software Engineer & Applied AI/ML Engineer</title>
+  <meta name="description" content="Senior Software Engineer and Applied AI/ML Engineer building production software, intelligent systems, and data-driven products." />
   <meta name="author" content="Ashenafi Chufamo" />
 
   <!-- Google Fonts -->
@@ -66,24 +66,25 @@
       <div>
         <div class="hero-badge">
           <span class="pulse-dot"></span>
-          Senior Software Engineer → AI/ML
+          Senior Software Engineer → Applied AI/ML
         </div>
         <h1 class="hero-title" id="hero-name">Ashenafi Chufamo</h1>
         <div class="hero-roles gradient-text" id="hero-headline">
-          Senior Software Engineer building toward AI/ML.
+          Senior Software Engineer → Applied AI/ML
+        </div>
+        <div style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+          I build production software and intelligent systems.
         </div>
         <p class="hero-desc" id="hero-bio">
-          I build production software and applied AI systems, combining years of software engineering experience with my background in Artificial Intelligence.
+          Years of software engineering experience, an MSc in Artificial Intelligence, and hands-on work applying AI/ML to real-world products and financial technology.
         </p>
 
-        <div class="hero-tags-row">
-          <span class="hero-tag">Software Engineering</span>
-          <span class="hero-tag">Applied AI/ML</span>
-          <span class="hero-tag">Product Development</span>
-        </div>
+        <!-- Qualitative Signal Badges -->
+        <div id="production-signals-container"></div>
 
         <div class="hero-actions">
           <a href="#software-built" class="btn-primary">View My Work →</a>
+          <a href="./assets/docs/Ashenafi_Chufamo_CV.pdf" target="_blank" download class="btn-download-cv cv-download-btn">📄 Download CV</a>
           <a href="#about" class="btn-secondary">About Me</a>
           <button class="btn-secondary" id="hero-replay-video-btn" style="padding: 12px 18px;">🎬 Watch Intro Video</button>
         </div>
@@ -107,13 +108,13 @@
   <section id="about">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Background & Mindset</span>
+        <span class="section-subtitle">Background & Engineering Mindset</span>
         <h2 class="section-title">About Me</h2>
       </div>
 
       <div class="glass-card" style="max-width: 900px; margin: 0 auto; line-height: 1.75; font-size: 1.02rem;">
         <p style="margin-bottom: 16px; color: var(--text-secondary);">
-          I am a software engineer with several years of experience building applications and production systems. After completing my Master's degree in Artificial Intelligence at Addis Ababa University, I began moving deeper into AI and machine learning through practical work on production systems at ArifPay as a Data Science Engineer. Alongside that work, I continue building software products and AI/agentic systems as a cofounder at Technest/Sumuni.
+          I am a software engineer with years of experience designing, building, and deploying production applications and financial software systems. After earning my Master's degree in Artificial Intelligence at Addis Ababa University, I transitioned deeper into applied AI/ML as a Data Science Engineer at ArifPay, later stepping into technical leadership responsibilities over financial software, risk detection, and data pipelines. Alongside that work, I continue building software products and intelligent systems as a cofounder at Technest/Sumuni.
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); justify-content: center; text-align: center;">
           <div style="flex: 1; min-width: 200px;">
@@ -122,7 +123,7 @@
           </div>
           <div style="font-weight: 700; color: var(--accent-blue);">+</div>
           <div style="flex: 1; min-width: 200px;">
-            <div style="font-weight: 700; color: var(--accent-emerald);">AI / Machine Learning</div>
+            <div style="font-weight: 700; color: var(--accent-emerald);">Applied AI / ML</div>
             <div style="font-size: 0.85rem; color: var(--text-muted);">The Specialization</div>
           </div>
           <div style="font-weight: 700; color: var(--accent-blue);">+</div>
@@ -141,7 +142,7 @@
   <section id="career-transition" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Career Progression</span>
+        <span class="section-subtitle">Career Evolution</span>
         <h2 class="section-title">From Software Engineering to AI</h2>
       </div>
 
@@ -163,6 +164,9 @@
         <h2 class="section-title">Software I've Built</h2>
       </div>
 
+      <!-- Interactive Category Filter Bar -->
+      <div class="filter-tab-bar" id="project-filter-bar"></div>
+
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="software-built-grid">
         <!-- Populated dynamically via script.js -->
       </div>
@@ -170,17 +174,17 @@
   </section>
 
   <!-- ------------------------------------------------------------------------
-       7. Applied AI at ArifPay (Data Science Engineer)
+       7. Applied AI at ArifPay (Data Science Engineer → Tech Lead)
        ------------------------------------------------------------------------ -->
   <section id="arifpay-ai" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Data Science Engineer • ArifPay</span>
+        <span class="section-subtitle">Data Science Engineer → Tech Lead • ArifPay</span>
         <h2 class="section-title">Applied AI at ArifPay</h2>
       </div>
 
       <p style="text-align: center; max-width: 750px; margin: -20px auto 40px; color: var(--text-secondary); font-size: 0.95rem;">
-        Worked on practical machine learning models, predictive algorithms, reporting pipelines, and agentic intelligence to support financial services and payment infrastructure in Ethiopia.
+        Joined ArifPay as a Data Science Engineer after earning my Master's in AI, applying machine learning models, fraud detection algorithms, and data pipelines to production financial technology systems, later taking on technical leadership responsibilities.
       </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="arifpay-ai-grid">
@@ -200,7 +204,7 @@
       </div>
 
       <p style="text-align: center; max-width: 700px; margin: -20px auto 40px; color: var(--text-secondary); font-size: 0.95rem;">
-        Real-world AI systems I've worked on, detailing problem statements, system approach, and my personal engineering contributions.
+        Selected applied AI systems, detailing problem statements, system approach, explicit personal contributions, and technology stack.
       </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="applied-ai-case-studies-grid">
@@ -215,7 +219,7 @@
   <section id="technest-products" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Cofounder & Product Engineer</span>
+        <span class="section-subtitle">Cofounder & Product Lead</span>
         <h2 class="section-title">Building Products at Technest</h2>
       </div>
 
@@ -276,7 +280,7 @@
           Interpretable Knowledge Distillation with Mechanistic Attention Transfer for Efficient Model Compression
         </h3>
         <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px;">
-          My Master's research focused on compressing deep neural networks into efficient student models while transferring mechanistic attention maps to preserve model interpretability and decision confidence.
+          Master's research focused on compressing deep neural networks into efficient student models while transferring mechanistic attention maps to preserve model interpretability and decision confidence.
         </p>
 
         <div class="thesis-flow-container" id="msc-research-flow">
@@ -348,11 +352,12 @@
         <span class="section-subtitle">Get In Touch</span>
         <h2 class="section-title" style="margin-bottom: 14px;">Let's Build Something.</h2>
         <p style="font-size: 1.02rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 28px;">
-          Interested in software engineering, applied AI, product development, or building something from scratch? I'd be happy to connect.
+          I'm interested in building production software, applied AI/ML systems, and products that solve real problems.
         </p>
 
         <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 24px;">
-          <a href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185" target="_blank" rel="noopener" class="btn-primary">Connect on LinkedIn 💼</a>
+          <a href="./assets/docs/Ashenafi_Chufamo_CV.pdf" target="_blank" download class="btn-primary cv-download-btn">📄 Download CV</a>
+          <a href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185" target="_blank" rel="noopener" class="btn-secondary">Connect on LinkedIn 💼</a>
           <a href="https://github.com/ashuChufamo" target="_blank" rel="noopener" class="btn-secondary">GitHub Profile 🐙</a>
           <a href="mailto:chufamoashenafi@gmail.com" class="btn-secondary">Send Email ✉️</a>
         </div>
@@ -366,7 +371,7 @@
   <footer>
     <div class="container">
       <p style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">Ashenafi Chufamo</p>
-      <p style="font-size: 0.82rem; color: var(--accent-cyan); margin-bottom: 12px;">Senior Software Engineer → AI/ML</p>
+      <p style="font-size: 0.82rem; color: var(--accent-cyan); margin-bottom: 12px;">Senior Software Engineer → Applied AI/ML</p>
       <p>© <span id="copyright-year">2026</span> Ashenafi Chufamo. Built with engineering discipline.</p>
     </div>
   </footer>
