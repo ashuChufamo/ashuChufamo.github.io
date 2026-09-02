@@ -282,7 +282,7 @@ function renderWhatIActuallyDo() {
 
   container.innerHTML = `
     <div class="what-i-do-card">
-      <h3 class="what-i-do-title">⚡ BUILD</h3>
+      <h3 class="what-i-do-title">⚡ SOFTWARE</h3>
       ${data.build.map(item => `
         <div class="capability-list-item">
           <div class="capability-item-name">${item.name}</div>
@@ -302,7 +302,7 @@ function renderWhatIActuallyDo() {
     </div>
 
     <div class="what-i-do-card">
-      <h3 class="what-i-do-title" style="color: var(--accent-purple);">🚀 PRODUCT</h3>
+      <h3 class="what-i-do-title" style="color: var(--accent-purple);">🚀 PRODUCTS</h3>
       ${data.product.map(item => `
         <div class="capability-list-item">
           <div class="capability-item-name">${item.name}</div>
