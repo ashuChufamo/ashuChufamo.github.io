@@ -20,7 +20,7 @@
   <div class="scroll-progress" id="scroll-progress"></div>
 
   <!-- ------------------------------------------------------------------------
-       1. Navigation Header
+       1. Navigation Header (Consolidated 8-Item Navigation)
        ------------------------------------------------------------------------ -->
   <header class="navbar-header">
     <a href="#" class="brand-logo">
@@ -31,9 +31,9 @@
     <nav class="nav-menu" id="nav-menu">
       <a href="#hero" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#career-transition" class="nav-link">Transition</a>
-      <a href="#arifpay-ai" class="nav-link">AI</a>
-      <a href="#software-built" class="nav-link">Projects</a>
+      <a href="#software-built" class="nav-link">Software</a>
+      <a href="#arifpay-ai" class="nav-link">AI / ArifPay</a>
+      <a href="#technest-products" class="nav-link">Technest</a>
       <a href="#research" class="nav-link">Research</a>
       <a href="#experience" class="nav-link">Experience</a>
       <a href="#contact" class="nav-link">Contact</a>
@@ -72,18 +72,18 @@
         <div class="hero-roles gradient-text" id="hero-headline">
           Senior Software Engineer → Applied AI/ML
         </div>
-        <div style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
-          I build production software and intelligent systems.
+        <div style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">
+          I build production software and applied AI systems.
         </div>
         <p class="hero-desc" id="hero-bio">
-          Years of software engineering experience, an MSc in Artificial Intelligence, and hands-on work applying AI/ML to real-world products and financial technology.
+          I combine years of software engineering experience with an MSc in Artificial Intelligence and hands-on work building software, machine learning systems, data products, and intelligent applications.
         </p>
 
         <!-- Qualitative Signal Badges -->
         <div id="production-signals-container"></div>
 
         <div class="hero-actions">
-          <a href="#software-built" class="btn-primary">View My Work →</a>
+          <a href="#software-built" class="btn-primary">View Software Built →</a>
           <a href="./assets/docs/Ashenafi_Chufamo_CV.pdf" target="_blank" download class="btn-download-cv cv-download-btn">📄 Download CV</a>
           <a href="#about" class="btn-secondary">About Me</a>
           <button class="btn-secondary" id="hero-replay-video-btn" style="padding: 12px 18px;">🎬 Watch Intro Video</button>
@@ -103,7 +103,7 @@
   </section>
 
   <!-- ------------------------------------------------------------------------
-       4. About Me Section
+       4. About Section
        ------------------------------------------------------------------------ -->
   <section id="about">
     <div class="container">
@@ -113,9 +113,8 @@
       </div>
 
       <div class="glass-card" style="max-width: 900px; margin: 0 auto; line-height: 1.75; font-size: 1.02rem;">
-        <p style="margin-bottom: 16px; color: var(--text-secondary);">
-          I am a software engineer with years of experience designing, building, and deploying production applications and financial software systems. After earning my Master's degree in Artificial Intelligence at Addis Ababa University, I transitioned deeper into applied AI/ML as a Data Science Engineer at ArifPay, later stepping into technical leadership responsibilities over financial software, risk detection, and data pipelines. Alongside that work, I continue building software products and intelligent systems as a cofounder at Technest/Sumuni.
-        </p>
+        <div id="about-paragraphs-container"></div>
+
         <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color); justify-content: center; text-align: center;">
           <div style="flex: 1; min-width: 200px;">
             <div style="font-weight: 700; color: var(--accent-cyan);">Software Engineering</div>
@@ -142,7 +141,7 @@
   <section id="career-transition" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Career Evolution</span>
+        <span class="section-subtitle">Career Progression</span>
         <h2 class="section-title">From Software Engineering to AI</h2>
       </div>
 
@@ -155,12 +154,12 @@
   </section>
 
   <!-- ------------------------------------------------------------------------
-       6. Software I've Built (Software Engineering Showcase)
+       6. Software I've Built (Featured Real Projects)
        ------------------------------------------------------------------------ -->
   <section id="software-built">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Engineering Foundation</span>
+        <span class="section-subtitle">Production-oriented software across mobility, fintech, enterprise systems and consumer applications</span>
         <h2 class="section-title">Software I've Built</h2>
       </div>
 
@@ -174,38 +173,45 @@
   </section>
 
   <!-- ------------------------------------------------------------------------
-       7. Applied AI at ArifPay (Data Science Engineer → Tech Lead)
+       7. Applied AI at ArifPay (Data Science Engineer → Technical Leadership)
        ------------------------------------------------------------------------ -->
   <section id="arifpay-ai" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Data Science Engineer → Tech Lead • ArifPay</span>
+        <span class="section-subtitle">Data Science Engineer → Technical Leadership • ArifPay</span>
         <h2 class="section-title">Applied AI at ArifPay</h2>
       </div>
 
       <p style="text-align: center; max-width: 750px; margin: -20px auto 40px; color: var(--text-secondary); font-size: 0.95rem;">
-        Joined ArifPay as a Data Science Engineer after earning my Master's in AI, applying machine learning models, fraud detection algorithms, and data pipelines to production financial technology systems, later taking on technical leadership responsibilities.
+        At ArifPay, I moved deeper into data science and applied AI while continuing to work within production software and financial technology systems.
       </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="arifpay-ai-grid">
         <!-- Populated dynamically via script.js -->
       </div>
+
+      <!-- Intelligent Systems Subsection -->
+      <div style="margin-top: 50px;">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--accent-purple);">Intelligent Systems</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">Systems designed for market intelligence, business development, social media analysis, partnership matching, and agentic research workflows.</p>
+        </div>
+        <div class="intel-systems-grid" id="intelligent-systems-grid">
+          <!-- Populated dynamically via script.js -->
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ------------------------------------------------------------------------
-       8. Interactive Applied AI Case Studies
+       8. Selected Applied AI Work (Case Studies)
        ------------------------------------------------------------------------ -->
   <section id="applied-ai">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Systems & Implementation</span>
+        <span class="section-subtitle">Implementation & System Breakdown</span>
         <h2 class="section-title">Selected Applied AI Work</h2>
       </div>
-
-      <p style="text-align: center; max-width: 700px; margin: -20px auto 40px; color: var(--text-secondary); font-size: 0.95rem;">
-        Selected applied AI systems, detailing problem statements, system approach, explicit personal contributions, and technology stack.
-      </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="applied-ai-case-studies-grid">
         <!-- Populated dynamically via script.js -->
@@ -214,18 +220,18 @@
   </section>
 
   <!-- ------------------------------------------------------------------------
-       9. Building Products at Technest / Sumuni (Cofounder)
+       9. Building Products at Technest (Cofounder • Product & Technology)
        ------------------------------------------------------------------------ -->
   <section id="technest-products" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Cofounder & Product Lead</span>
+        <span class="section-subtitle">Cofounder • Product & Technology</span>
         <h2 class="section-title">Building Products at Technest</h2>
       </div>
 
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;" id="technest-lifecycle-flow">
-        <!-- Lifecycle steps populated dynamically -->
-      </div>
+      <p style="text-align: center; max-width: 750px; margin: -20px auto 40px; color: var(--text-secondary); font-size: 0.95rem;">
+        Through Technest/Sumuni, I continue to build software products and business systems from idea to implementation.
+      </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;" id="technest-products-grid">
         <!-- Populated dynamically via script.js -->
@@ -234,23 +240,23 @@
   </section>
 
   <!-- ------------------------------------------------------------------------
-       10. "What I Build" Section
+       10. "What I Actually Do" (5 Capability Cards)
        ------------------------------------------------------------------------ -->
   <section id="what-i-do">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Practical Capabilities</span>
-        <h2 class="section-title">What I Build</h2>
+        <span class="section-subtitle">Core Capabilities</span>
+        <h2 class="section-title">What I Actually Do</h2>
       </div>
 
-      <div class="what-i-do-grid" id="what-i-actually-do-grid">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;" id="what-i-actually-do-grid">
         <!-- Populated dynamically via script.js -->
       </div>
     </div>
   </section>
 
   <!-- ------------------------------------------------------------------------
-       11. Technology Stack
+       11. Technology Stack & AI Areas
        ------------------------------------------------------------------------ -->
   <section id="tech-stack" style="background: var(--bg-secondary);">
     <div class="container">
@@ -259,8 +265,14 @@
         <h2 class="section-title">Technology Stack</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;" id="tech-stack-grid">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;" id="tech-stack-grid">
         <!-- Populated dynamically via script.js -->
+      </div>
+
+      <!-- AI Areas Domain Grid -->
+      <div style="margin-top: 40px;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.25rem; text-align: center; color: var(--text-primary); margin-bottom: 8px;">AI Areas & Specializations</h3>
+        <div class="ai-areas-grid" id="ai-areas-grid"></div>
       </div>
     </div>
   </section>
@@ -280,7 +292,7 @@
           Interpretable Knowledge Distillation with Mechanistic Attention Transfer for Efficient Model Compression
         </h3>
         <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px;">
-          Master's research focused on compressing deep neural networks into efficient student models while transferring mechanistic attention maps to preserve model interpretability and decision confidence.
+          My MSc research explored how knowledge distillation can be made more interpretable by transferring attention-related information from a larger teacher model to a smaller student model.
         </p>
 
         <div class="thesis-flow-container" id="msc-research-flow">
@@ -291,7 +303,7 @@
   </section>
 
   <!-- ------------------------------------------------------------------------
-       13. Currently Exploring & Laboratory Instructor
+       13. Currently Exploring & Teaching Experience
        ------------------------------------------------------------------------ -->
   <section id="exploring" style="background: var(--bg-secondary);">
     <div class="container">
@@ -325,13 +337,13 @@
   <section id="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">History & Qualifications</span>
+        <span class="section-subtitle">Verified Experience & Education</span>
         <h2 class="section-title">Experience & Education</h2>
       </div>
 
       <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px;">
         <div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 20px;">Work History</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 20px;">Work Experience</h3>
           <div id="career-history-timeline"></div>
         </div>
 
@@ -350,16 +362,16 @@
     <div class="container">
       <div class="glass-card" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 40px 30px;">
         <span class="section-subtitle">Get In Touch</span>
-        <h2 class="section-title" style="margin-bottom: 14px;">Let's Build Something.</h2>
+        <h2 class="section-title" style="margin-bottom: 14px;">Let's Build Something</h2>
         <p style="font-size: 1.02rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 28px;">
-          I'm interested in building production software, applied AI/ML systems, and products that solve real problems.
+          I'm interested in building production software, applied AI/ML systems and products that solve real problems.
         </p>
 
         <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 24px;">
-          <a href="./assets/docs/Ashenafi_Chufamo_CV.pdf" target="_blank" download class="btn-primary cv-download-btn">📄 Download CV</a>
-          <a href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185" target="_blank" rel="noopener" class="btn-secondary">Connect on LinkedIn 💼</a>
-          <a href="https://github.com/ashuChufamo" target="_blank" rel="noopener" class="btn-secondary">GitHub Profile 🐙</a>
-          <a href="mailto:chufamoashenafi@gmail.com" class="btn-secondary">Send Email ✉️</a>
+          <a href="mailto:chufamoashenafi@gmail.com" class="btn-primary">Email Me ✉️</a>
+          <a href="https://et.linkedin.com/in/ashenafi-chufamo-bab330185" target="_blank" rel="noopener" class="btn-secondary">LinkedIn 💼</a>
+          <a href="https://github.com/ashuChufamo" target="_blank" rel="noopener" class="btn-secondary">GitHub 🐙</a>
+          <a href="./assets/docs/Ashenafi_Chufamo_CV.pdf" target="_blank" download class="btn-download-cv cv-download-btn">📄 Download CV</a>
         </div>
       </div>
     </div>

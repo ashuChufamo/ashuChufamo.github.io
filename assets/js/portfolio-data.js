@@ -1,5 +1,5 @@
 /**
- * Portfolio Central Data Configuration — Ashenafi Chufamo (V2.5 Undeniably Credible)
+ * Portfolio Central Data Configuration — Ashenafi Chufamo (V3.0 Complete & Evidence-Driven)
  * Primary Positioning: Senior Software Engineer → Applied AI/ML
  */
 
@@ -7,8 +7,16 @@ window.personalInfo = {
   name: "Ashenafi Chufamo",
   title: "Senior Software Engineer → Applied AI/ML",
   headline: "Senior Software Engineer → Applied AI/ML",
-  tagline: "I build production software and intelligent systems.",
-  bio: "Years of software engineering experience, an MSc in Artificial Intelligence, and hands-on work applying AI/ML to real-world products and financial technology.",
+  primaryStatement: "I build production software and applied AI systems.",
+  tagline: "I build production software and applied AI systems.",
+  supportingCopy: "I combine years of software engineering experience with an MSc in Artificial Intelligence and hands-on work building software, machine learning systems, data products, and intelligent applications.",
+  bio: "I combine years of software engineering experience with an MSc in Artificial Intelligence and hands-on work building software, machine learning systems, data products, and intelligent applications.",
+  aboutText: [
+    "I am a software engineer with years of experience building mobile, web, backend and enterprise systems.",
+    "After developing a strong foundation in software engineering, I completed an MSc in Artificial Intelligence at Addis Ababa University, where I focused more deeply on machine learning, computer vision, model compression and AI research.",
+    "I then moved deeper into applied AI and data science through my work at ArifPay, working on problems including fraud detection, credit scoring, prediction, recommendation, computer vision, reporting and intelligent systems.",
+    "Alongside this, I continue building products and software systems through Technest/Sumuni."
+  ],
   location: "Addis Ababa, Ethiopia",
   email: "chufamoashenafi@gmail.com",
   cvUrl: "./assets/docs/Ashenafi_Chufamo_CV.pdf",
@@ -16,7 +24,7 @@ window.personalInfo = {
   linkedin: "https://et.linkedin.com/in/ashenafi-chufamo-bab330185"
 };
 
-// "Built for Production" Qualitative Signals
+// "Built for Production" Qualitative Signal Badges
 window.productionSignals = [
   "Production Systems",
   "Mobile Applications",
@@ -29,47 +37,41 @@ window.productionSignals = [
   "Technical Leadership"
 ];
 
-// Narrative Career Transition Timeline
+// Visual Progression Timeline ("From Software Engineering to AI")
 window.careerTransition = [
   {
     step: "01",
-    phase: "Software Engineering",
-    desc: "Built software applications, mobile clients, and web solutions. Developed core software engineering fundamentals."
+    phase: "Software Engineering Foundation",
+    desc: "Built mobile, web, backend and enterprise software systems. Focus: Application development, APIs, backend systems, mobile applications, databases, system integration."
   },
   {
     step: "02",
-    phase: "Senior Software Engineering",
-    desc: "Expanded into system architecture, production backend APIs, Flutter mobile apps, database design, and end-to-end product delivery."
+    phase: "MSc Artificial Intelligence",
+    desc: "Completed MSc in AI at Addis Ababa University. Focus: Machine Learning, Artificial Intelligence, Computer Vision, Model Compression, Explainability, AI Research."
   },
   {
     step: "03",
-    phase: "MSc in Artificial Intelligence",
-    desc: "Deepened technical research at Addis Ababa University, focusing on machine learning, deep learning, computer vision, and model compression."
+    phase: "Applied AI at ArifPay",
+    desc: "Worked as Data Science Engineer and took on technical leadership. Worked across: Fraud Detection, Credit Scoring, Churn Prediction, Recommendation, Computer Vision, Data & Reporting, Agentic AI."
   },
   {
     step: "04",
-    phase: "Applied AI & Tech Lead — ArifPay",
-    desc: "Applied AI and data science to real-world fintech systems. Transitioned from Data Science Engineer into technical leadership responsibilities across payment infrastructure."
-  },
-  {
-    step: "05",
-    phase: "Software + AI + Products",
-    desc: "Combining software engineering, applied AI/ML, data pipelines, agentic workflows, and product development as Cofounder at Technest/Sumuni."
+    phase: "Product & AI Development at Technest",
+    desc: "Cofounder building software products, mobile applications, enterprise systems, AI systems, agentic workflows, and data-driven products."
   }
 ];
 
-// Selected Software Projects ("Software I've Built")
+// Software I've Built (Featured Real Software Projects)
 window.softwareBuilt = [
   {
-    id: "usp-airport",
-    title: "Ethiopian Airport Parking System Suite",
-    category: "Software Engineering",
+    id: "ethiopian-airport-parking",
+    title: "Ethiopian Airlines Airport Parking System Suite",
+    category: "Enterprise • Parking • Mobility",
     filterCategory: "Mobile",
-    myRole: "Software Architecture & System Integration",
-    problem: "Manual gate entry, revenue leakage, and inefficient vehicle tracking at airport parking facilities.",
-    desc: "Complete smart airport parking gate control, revenue collection, and vehicle management ecosystem.",
+    myRole: "Software engineering, application development, system integration and product development",
+    desc: "A parking management system built for airport parking operations, covering the software systems required to manage parking workflows and transactions.",
     whatIBuilt: "Architected multi-app suite connecting hardware barrier gates, web cashier terminals, attendant mobile apps, and admin reporting.",
-    tech: ["Flutter", "Web", "Node.js", "Hardware Integration", "PostgreSQL"],
+    tech: ["Flutter", "Backend APIs", "Database", "System Integration", "Node.js"],
     subApps: [
       "Ethiopian Airport Parking Gate Control (Flutter)",
       "Airport Parking Attendant App (Flutter)",
@@ -81,14 +83,13 @@ window.softwareBuilt = [
   },
   {
     id: "addis-parking",
-    title: "Addis Parking & Mobility Suite",
-    category: "Software Engineering",
+    title: "Addis Parking Suite",
+    category: "Mobility • Parking • Mobile",
     filterCategory: "Mobile",
-    myRole: "Mobile App Lead & System Design",
-    problem: "Urban parking congestion and lack of real-time slot visibility across Addis Ababa parking lots.",
-    desc: "Smart urban parking management platform with automated vehicle license plate recognition and slot booking.",
+    myRole: "Mobile and software engineering, system integration and product development",
+    desc: "A parking platform developed for Addis Parking, focused on improving parking management and the user experience around urban parking.",
     whatIBuilt: "Engineered mobile attendant application, supervisor management client, and tow-truck dispatch module.",
-    tech: ["Flutter", "Node.js", "REST APIs", "LPR Integration"],
+    tech: ["Flutter", "APIs", "Backend", "Maps / Location Services", "LPR"],
     subApps: [
       "Attendant App (Flutter)",
       "Parking Supervisor App (Flutter)",
@@ -97,79 +98,93 @@ window.softwareBuilt = [
     image: "./assets/images/addis.jpg"
   },
   {
-    id: "atrip-ride-rental",
-    title: "Atrip Mobility Ecosystem (Ride & Rental)",
-    category: "Software Engineering",
+    id: "atrip-ride",
+    title: "Atrip Ride",
+    category: "Ride-Hailing • Mobile • Backend",
     filterCategory: "Mobile",
-    myRole: "Full Stack & Mobile Development",
-    problem: "Fragmented vehicle rental booking and urban transportation dispatch in Ethiopia.",
-    desc: "Integrated vehicle rental booking platform and ride-hailing driver/owner management system.",
-    whatIBuilt: "Developed vehicle owner management app, driver dispatch client, and real-time trip tracking APIs.",
-    tech: ["Flutter", "Node.js", "Express", "MongoDB", "Google Maps API"],
-    subApps: [
-      "Atrip Rental Owner App (Flutter)",
-      "Atrip Rental Driver App (Flutter)",
-      "Atrip Booking Web Portal"
-    ]
+    myRole: "Mobile development, API integration, system implementation and product engineering",
+    desc: "A ride-hailing application involving passenger and driver workflows, trip management, location services and backend integration.",
+    whatIBuilt: "Implemented driver dispatch app, passenger ride booking interfaces, and real-time trip tracking integration.",
+    tech: ["Flutter", "APIs", "Maps / Location Services", "Backend", "Node.js"]
+  },
+  {
+    id: "atrip-rental",
+    title: "Atrip Rental",
+    category: "Vehicle Rental • Mobile • Backend",
+    filterCategory: "Mobile",
+    myRole: "Mobile development, API integration and product engineering",
+    desc: "A vehicle rental application for managing rental-related workflows and user interactions.",
+    whatIBuilt: "Developed vehicle owner client, reservation booking APIs, and vehicle availability tracking module.",
+    tech: ["Flutter", "APIs", "Backend", "Node.js", "MongoDB"]
   },
   {
     id: "zayno-app",
-    title: "Alateon / Zayno Digital Platform",
-    category: "Software Engineering",
+    title: "Zayno (zayno.io)",
+    category: "Product • Mobile • Software",
     filterCategory: "Software Engineering",
-    myRole: "Co-creator & Full-Stack Engineer",
-    problem: "Digital content distribution and structured community engagement platform.",
-    desc: "Mobile application and web digital content app built for Ethiopian Orthodox content distribution and community giving.",
+    myRole: "Cofounder and technology/product development",
+    desc: "A product developed through Technest/Sumuni as part of my ongoing product engineering work for content distribution and community giving.",
     whatIBuilt: "Implemented cross-platform mobile client, payment gateway integration, and backend API service.",
     tech: ["Flutter", "Node.js", "Payment Gateways", "REST APIs"],
     url: "https://zayno.io/"
   },
   {
-    id: "stock-management",
-    title: "Enterprise Custom Stock & Inventory System",
-    category: "Software Engineering",
+    id: "stock-management-system",
+    title: "Stock Management System",
+    category: "Enterprise • Inventory • Sales",
     filterCategory: "Backend",
-    myRole: "Backend Lead & Database Architect",
-    problem: "Inaccurate stock tracking, manual purchase order reconciliations, and financial reporting delays.",
-    desc: "Multi-branch inventory control, sales ledger, purchase order management, and role-based financial reporting system.",
-    whatIBuilt: "Built atomic inventory transaction manager, purchase order delivery trigger, and RBAC authorization module.",
+    myRole: "Product design, system architecture and software development",
+    desc: "A stock and sales management system designed to manage inventory entry, sales, expenses, pricing, financial tracking and role-based operations.",
+    whatIBuilt: "Built atomic inventory transaction manager, role-based authorization (Owner, Manager, Sales, Finance), P&L tracking, and offline sync engine.",
+    rolesAllowed: ["Owner", "Manager", "Sales", "Finance"],
+    capabilities: [
+      "Item entry & inventory catalog management",
+      "Sales tracking & receipt logging",
+      "Cost price & sales price calculations",
+      "Expense tracking & manager approval workflows",
+      "Promo codes & discount rule management",
+      "Product category hierarchy & stock movement audit",
+      "Profit and Loss (P&L) real-time calculations",
+      "Offline capability with automatic database synchronization when connectivity returns"
+    ],
     tech: ["Node.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Express"]
   },
   {
-    id: "technest-sms-gateway",
-    title: "Technest Enterprise SMS & Notification Gateway",
-    category: "Software Engineering",
+    id: "sms-gateway",
+    title: "Technest SMS Gateway",
+    category: "Backend • Infrastructure • Messaging",
     filterCategory: "Backend",
-    myRole: "Backend Engineer",
-    problem: "High failure rates and high latency in sending bulk transactional OTPs and SMS notifications.",
-    desc: "High-throughput messaging broker handling SMS dispatch, queue management, and delivery callbacks.",
+    myRole: "Software engineering and backend/system development",
+    desc: "An SMS gateway system developed through Technest/Sumuni for integrating SMS-based communication into applications and services.",
     whatIBuilt: "Implemented message queuing with Redis, rate limiter middleware, and provider failover routing.",
     tech: ["Node.js", "Redis", "BullMQ", "PostgreSQL", "REST APIs"]
   }
 ];
 
-// Applied AI at ArifPay (Data Science Engineer → Tech Lead)
+// Applied AI at ArifPay (Data Science Engineer → Technical Leadership)
 window.arifPayAI = {
-  role: "Data Science Engineer → Tech Lead",
+  role: "Data Science Engineer → Technical Leadership",
   company: "ArifPay Financial Technologies",
-  desc: "Applied machine learning, predictive algorithms, reporting pipelines, and agentic workflows to support payment systems, merchant risk, and business growth in Ethiopia.",
+  sectionIntro: "At ArifPay, I moved deeper into data science and applied AI while continuing to work within production software and financial technology systems.",
   projects: [
     {
       id: "fraud-detection",
       title: "Payment Fraud Detection Pipeline",
-      category: "Applied AI / ML",
+      category: "Fintech • Risk Control",
       filterCategory: "Fintech",
       myRole: "ML Feature Engineering & Pipeline Developer",
-      desc: "Anomalous transaction identification model detecting suspicious payment patterns in real-time.",
+      desc: "Worked on machine-learning approaches for identifying potentially suspicious transactions in a payment environment.",
+      areas: ["Transaction data", "Feature engineering", "Machine learning", "Risk detection", "Model evaluation", "Production integration"],
       tech: ["Python", "Scikit-learn", "XGBoost", "Pandas", "REST APIs"]
     },
     {
       id: "credit-scoring",
       title: "Explainable Merchant Credit Scoring",
-      category: "Applied AI / ML",
+      category: "Fintech • Credit Assessment",
       filterCategory: "Fintech",
       myRole: "ML Modeling & Explainability Lead",
-      desc: "ML credit scoring system utilizing merchant transaction history to evaluate micro-loan eligibility with SHAP explainability.",
+      desc: "Worked on data-driven approaches for assessing credit risk and supporting credit-related decision making.",
+      areas: ["Data preparation", "Feature engineering", "Predictive modeling", "Risk analysis"],
       tech: ["Python", "LightGBM", "SHAP", "Feature Engine", "PostgreSQL"]
     },
     {
@@ -178,16 +193,18 @@ window.arifPayAI = {
       category: "Applied AI / ML",
       filterCategory: "Applied AI / ML",
       myRole: "Data Science Engineer",
-      desc: "Predictive model identifying merchants at risk of becoming inactive based on transaction frequency and volume decay.",
+      desc: "Worked on predictive modeling to identify patterns associated with customer churn.",
+      areas: ["Customer data", "Feature engineering", "Predictive modeling", "Business intelligence"],
       tech: ["Python", "Scikit-learn", "Pandas", "Metabase BI"]
     },
     {
-      id: "recommendation-engines",
-      title: "Content & Merchant Recommendation Engines",
+      id: "recommendation-systems",
+      title: "Recommendation Approaches",
       category: "Applied AI / ML",
       filterCategory: "Applied AI / ML",
       myRole: "Algorithm Developer",
-      desc: "Recommendation systems developed for media platforms (Arts TV) and e-commerce product discovery.",
+      desc: "Worked on recommendation approaches designed to use available user/business data to provide relevant suggestions and interactions.",
+      areas: ["Data analysis", "Recommendation logic", "Machine learning", "Personalization"],
       tech: ["Python", "Collaborative Filtering", "TF-IDF", "Implicit ML"]
     },
     {
@@ -196,42 +213,69 @@ window.arifPayAI = {
       category: "Computer Vision",
       filterCategory: "Computer Vision",
       myRole: "Computer Vision Engineer",
-      desc: "Automated license plate detection and character recognition system for vehicle access control.",
+      desc: "Worked on computer vision systems involving vehicle/license plate recognition.",
+      areas: ["Computer vision", "Image processing", "Recognition", "Model/application integration"],
       tech: ["Python", "OpenCV", "YOLOv8", "Tesseract OCR", "PyTorch"]
     },
     {
       id: "regulatory-reporting",
-      title: "Enterprise Data Warehouse & BI Engine",
+      title: "Regulatory Reporting & Analytics Engine",
       category: "Data Systems",
       filterCategory: "Data",
       myRole: "Data Engineer & Pipeline Lead",
-      desc: "Scalable data pipeline aggregating transaction data for automated regulatory compliance reporting.",
+      desc: "Worked on reporting systems and dashboards for payment data, including regulatory reporting requirements and data aggregation.",
+      areas: ["Data pipelines", "Aggregation", "Reporting", "Dashboards", "Payment data", "Regulatory requirements"],
       tech: ["Apache Spark", "Hadoop", "PostgreSQL", "Metabase", "Python"]
-    },
-    {
-      id: "agentic-intelligence",
-      title: "Agentic Business & Market Intelligence",
-      category: "Agentic AI",
-      filterCategory: "Applied AI / ML",
-      myRole: "AI Systems Lead",
-      desc: "Agentic AI workflows aggregating merchant data, social media sentiment, and partnership intelligence.",
-      tech: ["Python", "LangChain", "LLMs", "Web Scraping", "Pandas"]
     }
   ]
 };
+
+// Intelligent Systems (Marketing, BD, Social Media, Partnership & Agentic AI)
+window.intelligentSystems = [
+  {
+    id: "marketing-intel",
+    title: "Marketing Intelligence Systems",
+    desc: "AI and data-driven systems for market analysis, customer segment insight, and marketing decision support.",
+    tech: ["Python", "Pandas", "Scikit-learn", "Metabase"]
+  },
+  {
+    id: "bd-intel",
+    title: "Business Development Intelligence",
+    desc: "Systems designed to help identify, score, and prioritize potential business and merchant outreach opportunities.",
+    tech: ["Python", "Data Scoring", "SQL", "Web Data Mining"]
+  },
+  {
+    id: "social-media-intel",
+    title: "Social Media Intelligence",
+    desc: "Systems for collecting, processing, and analyzing social media information to track digital merchant presence.",
+    tech: ["Python", "Web Extraction", "NLP Basics", "Pandas"]
+  },
+  {
+    id: "partnership-intel",
+    title: "Partnership Intelligence",
+    desc: "Systems designed to support partnership discovery, ecosystem analysis, and business development matching.",
+    tech: ["Python", "Graph Modeling", "Data Extraction", "BI Dashboards"]
+  },
+  {
+    id: "agentic-ai",
+    title: "Agentic AI Workflows",
+    desc: "AI systems and agents designed to automate research, information gathering, analysis, and business workflows.",
+    tech: ["Python", "LangChain", "LLMs / Ollama", "Automation Tooling"]
+  }
+];
 
 // Selected Applied AI Work (Structured Case Studies)
 window.appliedAICaseStudies = [
   {
     id: "cs-fraud",
-    title: "Fintech Fraud Detection Pipeline",
+    title: "Payment Fraud Detection Pipeline",
     category: "Fintech • Risk Control",
     filterCategory: "Fintech",
-    myRole: "ML Pipeline & Integration Engineer",
-    summary: "Real-time anomaly detection pipeline identifying high-risk transactions across merchant payment terminals.",
-    problem: "Manual transaction audits could not keep up with growing daily payment volumes, risking delayed fraud detection.",
-    approach: "Built feature extraction pipeline computing velocity metrics (transaction frequency, geo-anomaly, amount spikes) combined with XGBoost classification.",
-    contribution: "Engineered 20+ streaming features in Python, trained baseline risk model, and built REST API wrapper for real-time scoring.",
+    myRole: "ML Feature Engineering & Pipeline Developer",
+    summary: "Machine-learning approaches for identifying potentially suspicious transactions in a payment environment.",
+    problem: "Manual transaction audits could not scale with daily payment growth, requiring automated risk detection.",
+    approach: "Built feature engineering pipeline evaluating transaction frequency, velocity, and amount anomalies paired with classification algorithms.",
+    contribution: "Engineered streaming features in Python, trained risk classification models, and built API scoring integration.",
     tech: ["Python", "XGBoost", "Scikit-Learn", "FastAPI", "PostgreSQL"]
   },
   {
@@ -239,11 +283,11 @@ window.appliedAICaseStudies = [
     title: "Explainable Merchant Credit Scoring",
     category: "Fintech • Credit Assessment",
     filterCategory: "Fintech",
-    myRole: "Data Scientist & Model Developer",
-    summary: "Objective micro-lending credit assessment for small business merchants based on payment volume telemetry.",
-    problem: "Traditional financial institutions lack credit history for small merchants, preventing access to micro-loans.",
-    approach: "Formulated machine learning model evaluating daily payment consistency, merchant tenure, and refund rates, generating credit scores with SHAP explainability.",
-    contribution: "Developed feature pipelines, trained gradient boosted models, and generated interpretable feature attribution reports for credit reviewers.",
+    myRole: "ML Modeling & Explainability Lead",
+    summary: "Data-driven credit risk assessment evaluating merchant transaction telemetry for micro-lending eligibility.",
+    problem: "Traditional institutions lacked credit history for small business merchants, limiting micro-loan access.",
+    approach: "Formulated machine learning model analyzing payment volume consistency, tenure, and refund rates with SHAP explainability.",
+    contribution: "Developed feature pipelines, trained gradient boosted models, and generated interpretable attribution reports.",
     tech: ["Python", "LightGBM", "SHAP", "Pandas", "PostgreSQL"]
   },
   {
@@ -252,10 +296,10 @@ window.appliedAICaseStudies = [
     category: "Computer Vision • Access Control",
     filterCategory: "Computer Vision",
     myRole: "Computer Vision Engineer",
-    summary: "Real-time license plate detection and text extraction system for parking barriers.",
-    problem: "Manual ticket distribution caused delays and entry bottleneck at busy urban parking lots.",
-    approach: "Deployed YOLOv8 model for bounding box vehicle plate detection coupled with custom OCR text extraction.",
-    contribution: "Collected and annotated regional license plate dataset, fine-tuned YOLO model, and integrated plate matching with parking gate barrier APIs.",
+    summary: "Computer vision systems involving vehicle and license plate recognition for barrier access control.",
+    problem: "Manual ticket distribution caused delays and entry bottlenecks at parking facilities.",
+    approach: "Deployed YOLOv8 model for bounding box vehicle plate detection coupled with OCR text extraction.",
+    contribution: "Fine-tuned plate recognition models and integrated text matching with parking gate barrier APIs.",
     tech: ["Python", "YOLOv8", "OpenCV", "PyTorch", "Tesseract OCR"]
   },
   {
@@ -264,43 +308,37 @@ window.appliedAICaseStudies = [
     category: "Applied AI • Business Intelligence",
     filterCategory: "Applied AI / ML",
     myRole: "Data Science Engineer",
-    summary: "Predictive model identifying merchants at risk of discontinuing POS payment terminal usage.",
-    problem: "Merchant retention teams lacked early warning indicators when merchant transaction volume began declining.",
-    approach: "Constructed time-series features tracking 30-day transaction volume decay and merchant support ticket spikes.",
-    contribution: "Created automated weekly data extraction script, trained classification model, and exported actionable churn risk lists to Metabase dashboards.",
+    summary: "Predictive modeling to identify patterns associated with merchant transaction volume decay.",
+    problem: "Retention teams lacked early warning indicators when merchant transaction activity began declining.",
+    approach: "Constructed time-series features tracking transaction frequency decay over 30-day sliding windows.",
+    contribution: "Created automated data extraction scripts, trained classification models, and exported risk lists to Metabase dashboards.",
     tech: ["Python", "Scikit-Learn", "Pandas", "Metabase BI", "SQL"]
   },
   {
-    id: "cs-agentic",
-    title: "Agentic Market Intelligence System",
-    category: "Agentic AI • Business Systems",
-    filterCategory: "Applied AI / ML",
-    myRole: "AI & Data Engineer Lead",
-    summary: "Automated intelligence gathering pipeline evaluating business registration trends and digital merchant presence.",
-    problem: "Business development teams spent excessive time manually researching potential merchant prospects.",
-    approach: "Designed agentic data extraction pipeline scraping web directories, scoring merchant digital presence, and compiling prioritized outreach workbooks.",
-    contribution: "Built multi-source web extraction scripts, deduplication pipeline, and automated prospect scoring system.",
-    tech: ["Python", "LangChain", "BeautifulSoup", "Pandas", "OpenAI APIs"]
+    id: "cs-reporting",
+    title: "Regulatory Reporting & Analytics Engine",
+    category: "Data Systems • Regulatory",
+    filterCategory: "Data",
+    myRole: "Data Engineer & Pipeline Lead",
+    summary: "Reporting systems and dashboards for payment data, including regulatory reporting requirements and data aggregation.",
+    problem: "Aggregating daily transaction ledgers into regulatory formats required robust, repeatable data pipelines.",
+    approach: "Designed ETL batch pipeline consolidating multi-channel payment ledgers into unified data warehouse schemas.",
+    contribution: "Built aggregation SQL scripts, configured automated batch jobs, and created regulatory compliance dashboards.",
+    tech: ["Apache Spark", "Hadoop", "PostgreSQL", "Metabase", "Python"]
   }
 ];
 
-// Technest / Sumuni Products (Cofounder & Technology Lead)
+// Technest / Sumuni Products (Cofounder • Product & Technology)
 window.technestProducts = {
-  role: "Cofounder & Product/Technology Lead",
-  lifecycle: [
-    { step: "01", name: "Idea & Requirements", desc: "Understanding real business/user needs" },
-    { step: "02", name: "System Architecture", desc: "Designing database, API & UI framework" },
-    { step: "03", name: "Engineering & Dev", desc: "Building clean Flutter apps & backend services" },
-    { step: "04", name: "Deployment & QA", desc: "Production deployment & hardware gate integration" },
-    { step: "05", name: "Iteration", desc: "Optimizing features based on usage data" }
-  ],
+  role: "Cofounder • Product & Technology",
+  sectionIntro: "Through Technest/Sumuni, I continue to build software products and business systems from idea to implementation.",
   products: [
     {
       id: "tn-zayno",
       title: "Zayno (zayno.io)",
-      category: "Mobile & Web Platform",
+      category: "Product • Mobile • Software",
       filterCategory: "Mobile",
-      myRole: "Cofounder & Mobile Tech Lead",
+      myRole: "Cofounder & Product/Technology Lead",
       desc: "Ethiopian Orthodox content distribution and community giving platform.",
       tech: ["Flutter", "Node.js", "Payment Gateways"],
       url: "https://zayno.io/"
@@ -324,72 +362,155 @@ window.technestProducts = {
       tech: ["Flutter", "Dart", "Node.js"]
     },
     {
-      id: "tn-mobility",
-      title: "Smart Mobility Suites (Airport & Addis Parking)",
-      category: "Urban Technology",
+      id: "tn-sms-gateway",
+      title: "SMS Gateway",
+      category: "Backend • Infrastructure",
+      filterCategory: "Backend",
+      myRole: "Software Engineering & Backend Lead",
+      desc: "An SMS gateway system developed through Technest/Sumuni for integrating SMS communication into applications.",
+      tech: ["Node.js", "Redis", "BullMQ", "REST APIs"]
+    },
+    {
+      id: "tn-airport",
+      title: "Ethiopian Airlines Airport Parking",
+      category: "Enterprise • Mobility",
       filterCategory: "Mobile",
-      myRole: "Product & Engineering Lead",
-      desc: "Urban mobility, tow-truck dispatch, and smart gate barrier parking management software.",
-      tech: ["Flutter", "Node.js", "Hardware Barriers", "REST APIs"]
+      myRole: "Software Engineering & System Integration",
+      desc: "Smart gate control, cashier web portal, and attendant mobile application suite.",
+      tech: ["Flutter", "Node.js", "Hardware Gate Integration"]
+    },
+    {
+      id: "tn-addis-parking",
+      title: "Addis Parking Suite",
+      category: "Mobility • Parking",
+      filterCategory: "Mobile",
+      myRole: "Mobile & Software Engineering",
+      desc: "Attendant mobile application, supervisor management app, and tow-truck dispatch system.",
+      tech: ["Flutter", "APIs", "Location Services"]
+    },
+    {
+      id: "tn-atrip-ride",
+      title: "Atrip Ride",
+      category: "Ride-Hailing • Mobile",
+      filterCategory: "Mobile",
+      myRole: "Mobile Development & API Integration",
+      desc: "Ride-hailing application managing passenger booking, driver dispatch, and location tracking.",
+      tech: ["Flutter", "Node.js", "Google Maps API"]
+    },
+    {
+      id: "tn-atrip-rental",
+      title: "Atrip Rental",
+      category: "Vehicle Rental • Mobile",
+      filterCategory: "Mobile",
+      myRole: "Mobile Development & Product Engineering",
+      desc: "Vehicle rental platform for managing rental reservations, owner inventory, and user booking.",
+      tech: ["Flutter", "APIs", "MongoDB"]
+    },
+    {
+      id: "tn-stock-management",
+      title: "Stock Management System",
+      category: "Enterprise • Inventory",
+      filterCategory: "Backend",
+      myRole: "Product Design & System Architecture",
+      desc: "Inventory entry, sales tracking, cost/sales pricing, expense tracking, manager approval, and offline sync engine.",
+      tech: ["Node.js", "TypeScript", "PostgreSQL", "Prisma ORM"]
     }
   ]
 };
 
-// "What I Build" Matrix
-window.whatIActuallyDo = {
-  build: [
-    { name: "Mobile Applications", desc: "Cross-platform mobile apps built with Flutter for iOS & Android." },
-    { name: "Backend Systems & APIs", desc: "Scalable REST APIs, Microservices, Node.js & Django backends." },
-    { name: "Production Web Apps", desc: "Responsive web apps built with modern JavaScript/TypeScript." }
-  ],
-  intelligence: [
-    { name: "Machine Learning Models", desc: "Predictive classification, fraud detection, credit scoring & churn models." },
-    { name: "Computer Vision", desc: "License plate recognition (YOLOv8 + OCR) & image processing." },
-    { name: "Agentic AI & LLMs", desc: "Agentic workflows, market intelligence extraction & RAG implementations." }
-  ],
-  product: [
-    { name: "System Architecture", desc: "Database schema design, API structure & multi-app suite architecture." },
-    { name: "Product Development", desc: "Taking software products from initial concept to live production deployment." },
-    { name: "Technical Leadership", desc: "Leading development teams, establishing code standards & technical decisions." }
-  ]
+// "What I Actually Do" (5 Core Capability Cards)
+window.whatIActuallyDo = [
+  {
+    title: "Production Software",
+    icon: "⚡",
+    color: "var(--accent-cyan)",
+    desc: "Design and build mobile, web, backend and enterprise applications."
+  },
+  {
+    title: "Applied AI/ML",
+    icon: "🧠",
+    color: "var(--accent-emerald)",
+    desc: "Develop and integrate machine-learning and AI systems for practical business problems."
+  },
+  {
+    title: "Data Systems",
+    icon: "📊",
+    color: "var(--accent-blue)",
+    desc: "Work with data pipelines, analytics, reporting and data-driven applications."
+  },
+  {
+    title: "Intelligent Agents",
+    icon: "🤖",
+    color: "var(--accent-purple)",
+    desc: "Build AI-powered systems for research, intelligence, automation and business workflows."
+  },
+  {
+    title: "Technical Leadership",
+    icon: "🚀",
+    color: "var(--accent-amber)",
+    desc: "Contribute to architecture, technical decisions, system design and product development."
+  }
+];
+
+// Technology Stack (Grouped Humanly & Pragmatically)
+window.techStack = {
+  languages: ["Dart", "Python", "JavaScript", "Java", "Go", "C", "C#"],
+  mobile: ["Flutter"],
+  frontend: ["React", "Vue", "HTML", "CSS", "Bootstrap"],
+  backend: ["Node.js", "Django", "Laravel", "Spring"],
+  aiMl: ["Python", "PyTorch", "Hugging Face", "LangChain", "Ollama", "SHAP", "LIME"],
+  data: ["MySQL", "Apache Spark", "Hadoop", "Databricks", "Jupyter", "Metabase"]
 };
 
-// Technology Stack (Grouped Humanly)
-window.techStack = {
-  languages: ["Dart", "Python", "JavaScript / TypeScript", "Java", "Go", "C / C++"],
-  mobile: ["Flutter", "Android / iOS Setup"],
-  backend: ["Node.js / Express", "Django / Python", "Laravel / PHP", "Spring Boot / Java", "REST APIs"],
-  aiMl: ["Python", "PyTorch", "Scikit-learn", "Hugging Face", "LangChain", "SHAP / LIME", "OpenCV / YOLOv8"],
-  data: ["MySQL", "PostgreSQL", "Apache Spark", "Hadoop", "Databricks", "Metabase BI"],
-  infrastructure: ["Docker", "Git / GitHub", "Linux / Bash", "Redis", "Cloud Infrastructure"]
-};
+// Specialized AI Areas Breakdown
+window.aiAreasGrid = [
+  {
+    domain: "Machine Learning",
+    topics: ["Fraud Detection", "Credit Scoring", "Churn Prediction", "Recommendation Systems"]
+  },
+  {
+    domain: "Computer Vision",
+    topics: ["License Plate Recognition (LPR)", "Image-Based Systems", "Object Detection (YOLOv8)", "OCR Text Extraction"]
+  },
+  {
+    domain: "Generative AI",
+    topics: ["LLM Applications", "RAG Implementations", "LangChain Framework", "Ollama Local Execution"]
+  },
+  {
+    domain: "AI Agents",
+    topics: ["Research Automation", "Business Development Intelligence", "Marketing Intelligence", "Partnership Intelligence"]
+  }
+];
 
 // Academic MSc Research
 window.mscResearch = {
   title: "Interpretable Knowledge Distillation with Mechanistic Attention Transfer for Efficient Model Compression",
   institution: "Addis Ababa University • MSc in Artificial Intelligence",
+  degree: "MSc in Artificial Intelligence",
+  desc: "My MSc research explored how knowledge distillation can be made more interpretable by transferring attention-related information from a larger teacher model to a smaller student model.",
   flow: [
     { label: "Teacher Model", detail: "Deep High-Capacity Model" },
-    { label: "Knowledge Distillation", detail: "Soft-Logit Loss Transfer" },
-    { label: "Attention Transfer", detail: "Mechanistic Map Match" },
-    { label: "Compact Student", detail: "Efficient & Explainable AI" }
+    { label: "Attention Extraction", detail: "Mechanistic Map Match" },
+    { label: "Mechanistic Alignment", detail: "Attention Transfer Matrix" },
+    { label: "Knowledge Distillation", detail: "Soft Logit & Attention Loss" },
+    { label: "Efficient Student Model", detail: "Compact & Explainable AI" }
   ]
 };
 
-// Currently Exploring
+// Currently Exploring (Honest Exploration Areas)
 window.currentlyExploring = [
-  { topic: "Agentic AI Systems", desc: "Building autonomous agent workflows with tool-calling capabilities." },
-  { topic: "RAG & LLM Applications", desc: "Retrieval-Augmented Generation for enterprise document intelligence." },
-  { topic: "Production ML (MLOps)", desc: "Streamlining ML model monitoring, automated retraining & CI/CD." },
-  { topic: "Efficient & Explainable AI", desc: "Model quantization, distillation, and mechanistic interpretability." }
+  { topic: "Agentic AI", desc: "Building systems that combine LLMs, tools, data and workflows." },
+  { topic: "Applied Machine Learning", desc: "Going deeper into practical ML systems and model evaluation." },
+  { topic: "Efficient AI", desc: "Continuing to explore model compression, knowledge distillation and efficient AI based on my MSc research." },
+  { topic: "AI + Software Engineering", desc: "Exploring how AI can be integrated into reliable production software rather than treated as an isolated model." }
 ];
 
-// Teaching Experience (Laboratory Instructor)
+// Teaching Experience (Laboratory Instructor Entry)
 window.teachingExperience = {
   role: "Laboratory Instructor",
   institution: "Addis Ababa University",
   period: "Academic Laboratory Courses",
-  desc: "Assisted with laboratory practical sessions for university courses (approximately 5–6 sessions per semester), guiding students through hands-on programming and lab exercises.",
+  desc: "Supported laboratory sessions for a university course, working with students on practical exercises and technical concepts (approximately 5–6 sessions per semester).",
   courses: [
     "Data Structures & Algorithms Laboratory",
     "Cognitive Science & AI Foundations Laboratory",
@@ -397,25 +518,31 @@ window.teachingExperience = {
   ]
 };
 
-// Work History Timeline
+// Work History Timeline (Verified Entries Only)
 window.careerTimeline = [
   {
     period: "2023 — Present",
-    role: "Data Science Engineer → Tech Lead",
+    role: "Data Science Engineer / Technical Leadership",
     company: "ArifPay Financial Technologies",
-    desc: "Moved deeper into applied AI and data science while taking on technical leadership responsibilities over payment infrastructure, risk models, data pipelines, and intelligence systems."
+    desc: "Applied AI, machine learning, data systems, reporting, fraud detection, credit scoring, and financial technology."
   },
   {
     period: "2021 — Present",
-    role: "Cofounder & Product/Technology Lead",
+    role: "Cofounder & Product/Technology",
     company: "Technest / Sumuni",
-    desc: "Co-founded Technest software studio. Leading technical architecture, mobile engineering (Flutter), backend APIs, and product strategy across mobility suites, Zayno, and stock systems."
+    desc: "Software products, AI systems, enterprise solutions, mobility platforms, and end-to-end product development."
+  },
+  {
+    period: "2021",
+    role: "Software Engineering Intern",
+    company: "UNOPS (United Nations Office for Project Services)",
+    desc: "Assisted in software development, backend API integrations, database operations, and system documentation."
   },
   {
     period: "2020 — 2022",
     role: "Senior Software Engineer",
     company: "Qemer Software & Enterprise Systems",
-    desc: "Designed and engineered enterprise web applications, inventory management systems, REST APIs, and database structures."
+    desc: "Designed enterprise web applications, inventory management systems, REST APIs, and database structures."
   },
   {
     period: "2018 — 2020",
@@ -425,17 +552,17 @@ window.careerTimeline = [
   }
 ];
 
-// Education History
+// Education History (Verified Degree Entries)
 window.educationHistory = [
   {
     period: "2021 — 2023",
     degree: "Master of Science (MSc) in Artificial Intelligence",
     institution: "Addis Ababa University",
-    desc: "Specialized in Machine Learning, Computer Vision, Deep Neural Compression, Mechanistic Interpretability, and AI Systems."
+    desc: "Specialized in Machine Learning, Computer Vision, Model Compression, Explainability, and AI Systems. GPA: 3.89."
   },
   {
     period: "2014 — 2018",
-    degree: "Bachelor of Science (BSc) in Computer Science",
+    degree: "Bachelor's Degree in Software Engineering / Computer Science",
     institution: "Addis Ababa University",
     desc: "Rigorous foundation in Software Engineering, Algorithms, Database Management, Data Structures, and Computer Architecture."
   }
